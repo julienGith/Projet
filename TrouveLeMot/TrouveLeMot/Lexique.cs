@@ -37,7 +37,7 @@ namespace TrouveLeMot
                 base.Remove(mot);
             }
         }
-        public void Pioche()
+        public void Pioche(string mot)
         {
             Random rand = new Random();
             int aléatoire = 0;
