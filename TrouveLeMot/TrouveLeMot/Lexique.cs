@@ -53,14 +53,14 @@ namespace TrouveLeMot
         /// <param name="path"></param>
         public void SaveXML(string path)
         {
-            System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(Salaries));
+            System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(Lexique));
             System.IO.FileStream file = System.IO.File.Create(path);
             writer.Serialize(file, this);
             file.Close();
         }
         public void LoadXML(string path)
         {
-            System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Salaries));
+            System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Lexique));
             FileStream file = new FileStream(path, FileMode.Open);
             serializer.Deserialize(file);
         }
