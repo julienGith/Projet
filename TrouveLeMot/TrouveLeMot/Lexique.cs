@@ -12,8 +12,8 @@ namespace TrouveLeMot
    public class Lexique : List<string>
     {
         public Lexique(){ }
-
-        public new void Add(string mot )
+        
+        public void Ajouter(string mot )
         {
             bool trouve = false;
             foreach (string item in this)
@@ -58,7 +58,7 @@ namespace TrouveLeMot
         public void SaveXML(string path)
         {
             XmlSerializer writer = new XmlSerializer(typeof(Lexique));
-            FileStream file = File.Create(path);
+            FileStream file = new FileStream(path,FileMode.Append,FileAccess.Write);
             writer.Serialize(file, this);
             file.Close();
         }

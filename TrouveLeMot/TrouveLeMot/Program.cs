@@ -18,19 +18,20 @@ namespace TrouveLeMot
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Test();
-            
+            //Test();
+
             Application.Run(new frmConfig());
             
             
         }
+
         static void Test()
         {
             Lexique lexique = new Lexique();
-            lexique.Add("toto");
-            lexique.SaveXML(@"test.xml");
+
+            //lexique.SaveXML(@"test.xml");
             //lexique.LoadXML(@"test.xml");
-            
+
         }
     }
 
