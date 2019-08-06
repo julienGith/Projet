@@ -1,0 +1,15 @@
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config.csprojAssemblyReference.cache
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\MainWindow.g.cs
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\App.g.cs
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config_MarkupCompile.cache
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config_MarkupCompile.lref
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\bin\Debug\config.exe.config
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\bin\Debug\config.exe
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\bin\Debug\config.pdb
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\MainWindow.baml
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config.g.resources
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config.Properties.Resources.resources
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config.csproj.GenerateResource.cache
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config.csproj.CoreCompileInputs.cache
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config.exe
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\config\obj\Debug\config.pdb
