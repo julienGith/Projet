@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TrouveLeMot
 {
@@ -11,16 +12,16 @@ namespace TrouveLeMot
    public class Lexique : List<string>
     {
         public Lexique(){ }
-        Lexique lexique = new Lexique();
 
-        public string mot;
-
-        public new void Add(string mot)
+        public new void Add(string mot )
         {
             bool trouve = false;
-            if (lexique.Contains(mot))
+            foreach (string item in this)
             {
-                trouve = true;
+                if (item.Equals(mot))
+                {
+                    trouve = true;
+                }
             }
             if (!trouve)
             {
@@ -30,21 +31,24 @@ namespace TrouveLeMot
         public new void Remove(string mot)
         {
             bool trouve = false;
-            if (lexique.Contains(mot))
+             foreach (string item in this)
             {
-                trouve = true;
+                if (item.Equals(mot))
+                {
+                    trouve = true;
+                }
             }
             if (!trouve)
             {
                 base.Remove(mot);
             }
         }
-        public void Pioche(string mot)
+        public void Pioche()
         {
             Random rand = new Random();
             int aléatoire = 0;
-            aléatoire = rand.Next(0, lexique.Count - 1);
-            base.Add(lexique[aléatoire]);
+            aléatoire = rand.Next(0,this.Count - 1);
+            base.Add(this[aléatoire]);
         }
         #region 
         /// <summary>
@@ -53,8 +57,8 @@ namespace TrouveLeMot
         /// <param name="path"></param>
         public void SaveXML(string path)
         {
-            System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(Lexique));
-            System.IO.FileStream file = System.IO.File.Create(path);
+            XmlSerializer writer = new XmlSerializer(typeof(Lexique));
+            FileStream file = File.Create(path);
             writer.Serialize(file, this);
             file.Close();
         }
