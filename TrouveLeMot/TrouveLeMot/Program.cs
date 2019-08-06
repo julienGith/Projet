@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrouveLeMot;
+using System.Xml;
 
 namespace TrouveLeMot
 {
@@ -18,6 +19,7 @@ namespace TrouveLeMot
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Test();
+            
             Application.Run(new frmConfig());
             
             
@@ -26,7 +28,9 @@ namespace TrouveLeMot
         {
             Lexique lexique = new Lexique();
             lexique.Add("toto");
-            lexique.SaveXML(@"C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\test.xml");
+            lexique.SaveXML(@"test.xml");
+            //lexique.LoadXML(@"test.xml");
+            
         }
     }
 

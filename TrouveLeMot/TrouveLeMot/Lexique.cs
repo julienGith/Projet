@@ -64,7 +64,7 @@ namespace TrouveLeMot
         }
         public void LoadXML(string path)
         {
-            System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Lexique));
+            XmlSerializer serializer = new XmlSerializer(typeof(Lexique));
             FileStream file = new FileStream(path, FileMode.Open);
             serializer.Deserialize(file);
         }

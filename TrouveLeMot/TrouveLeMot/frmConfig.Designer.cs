@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lexiqueBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lexiqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.lexiqueBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lexiqueBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -39,6 +44,14 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 0;
+            // 
+            // lexiqueBindingSource1
+            // 
+            this.lexiqueBindingSource1.DataSource = typeof(TrouveLeMot.Lexique);
+            // 
+            // lexiqueBindingSource
+            // 
+            this.lexiqueBindingSource.DataSource = typeof(TrouveLeMot.Lexique);
             // 
             // textBox1
             // 
@@ -56,6 +69,8 @@
             this.Controls.Add(this.listBox1);
             this.Name = "frmConfig";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.lexiqueBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lexiqueBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -65,6 +80,8 @@
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.BindingSource lexiqueBindingSource;
+        private System.Windows.Forms.BindingSource lexiqueBindingSource1;
     }
 }
 
