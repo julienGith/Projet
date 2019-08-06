@@ -53,7 +53,7 @@ namespace TrouveLeMot
             foreach (XmlNode xNode in Xn)
             {
                 listBoxLex.Items.Add(xNode.InnerText);
-                lexique.Add(xNode.InnerText);
+                
             }
 
             //foreach ( var item  in doc.Attributes)

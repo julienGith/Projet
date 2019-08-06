@@ -58,7 +58,7 @@ namespace TrouveLeMot
         public void SaveXML(string path)
         {
             XmlSerializer writer = new XmlSerializer(typeof(Lexique));
-            FileStream file = new FileStream(path,FileMode.Append,FileAccess.Write);
+            FileStream file = new FileStream(path,FileMode.OpenOrCreate,FileAccess.Write);
             writer.Serialize(file, this);
             file.Close();
         }
