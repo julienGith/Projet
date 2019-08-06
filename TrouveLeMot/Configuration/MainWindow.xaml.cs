@@ -40,6 +40,7 @@ namespace Configuration
             }
         }
 
+
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             {
