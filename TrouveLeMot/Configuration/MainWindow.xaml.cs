@@ -52,10 +52,11 @@ namespace Configuration
         private void BtnTransfert_Click(object sender, RoutedEventArgs e)
         {
             listBoxCible.Items.Add(listBoxLex.SelectedItem);
+            listBoxLex.Items.Remove(listBoxLex.SelectedItem);
         }
-
         private void BtnSupr_Click(object sender, RoutedEventArgs e)
         {
+            listBoxLex.Items.Add(listBoxCible.SelectedItem);
             listBoxCible.Items.Remove(listBoxCible.SelectedItem);
         }
 
