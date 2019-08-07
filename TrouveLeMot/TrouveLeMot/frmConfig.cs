@@ -24,7 +24,7 @@ namespace TrouveLeMot
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             listBoxLex.Items.Add(txtBoxMot.Text);
-            lexique.Ajouter(txtBoxMot.Text);
+            lexique.Add(txtBoxMot.Text);
             lexique.SaveXML(@"test.xml");
             txtBoxMot.Clear();
         }
@@ -36,7 +36,7 @@ namespace TrouveLeMot
             foreach (XmlNode xNode in Xn)
             {
                 listBoxLex.Items.Add(xNode.InnerText);
-                lexique.Ajouter(xNode.InnerText);
+                lexique.Add(xNode.InnerText);
             }
         }
     }

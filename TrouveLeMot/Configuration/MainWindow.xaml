@@ -6,11 +6,17 @@
         xmlns:local="clr-namespace:Configuration"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="btnAdd" Content="Ajouter à la liste" HorizontalAlignment="Left" Margin="68,193,0,0" VerticalAlignment="Top" Width="145" Click="BtnAdd_Click"/>
+    <Grid Margin="0,0,-24,-20">
+        <Button x:Name="btnAdd" Content="Ajouter au lexique" HorizontalAlignment="Left" Margin="68,193,0,0" VerticalAlignment="Top" Width="145" Click="BtnAdd_Click"/>
         <ListBox x:Name="listBoxLex" HorizontalAlignment="Left" Height="245" Margin="234,92,0,0" VerticalAlignment="Top" Width="196"/>
         <TextBox x:Name="txtBoxMot" HorizontalAlignment="Left" Height="23" Margin="68,92,0,0" TextWrapping="Wrap" Text="Tapez un mot" VerticalAlignment="Top" Width="145" SpellCheck.IsEnabled="True"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="68,134,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Vérifiez l'orthographe" HorizontalAlignment="Left" Margin="68,134,0,0" VerticalAlignment="Top" Width="145"/>
+        <ListBox x:Name="listBoxCible" HorizontalAlignment="Left" Height="245" Margin="545,92,0,0" VerticalAlignment="Top" Width="196"/>
+        <Button x:Name="btnTransfert" Content="&gt;" HorizontalAlignment="Left" Margin="451,118,0,0" VerticalAlignment="Top" Width="75" Click="BtnTransfert_Click"/>
+        <Button x:Name="btnSupr" Content="Supprimer de la liste" HorizontalAlignment="Left" Margin="620,354,0,0" VerticalAlignment="Top" Width="121" Click="BtnSupr_Click"/>
+        <Button x:Name="btnRemove" Content="Retirer du lexique" HorizontalAlignment="Left" Margin="68,235,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.829,0.474" Click="BtnRemove_Click"/>
+        <Label Content="LEXIQUE" HorizontalAlignment="Left" Margin="296,61,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.25,0.457"/>
+        <Label Content="Liste des mots à trouver" HorizontalAlignment="Left" Margin="574,61,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

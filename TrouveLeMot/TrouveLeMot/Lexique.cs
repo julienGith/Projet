@@ -13,36 +13,36 @@ namespace TrouveLeMot
     {
         public Lexique(){ }
         
-        public void Ajouter(string mot )
-        {
-            bool trouve = false;
-            foreach (string item in this)
-            {
-                if (item.Equals(mot))
-                {
-                    trouve = true;
-                }
-            }
-            if (!trouve)
-            {
-                base.Add(mot);
-            }
-        }
-        public new void Remove(string mot)
-        {
-            bool trouve = false;
-             foreach (string item in this)
-            {
-                if (item.Equals(mot))
-                {
-                    trouve = true;
-                }
-            }
-            if (!trouve)
-            {
-                base.Remove(mot);
-            }
-        }
+        //public void Ajouter(string mot )
+        //{
+        //    bool trouve = false;
+        //    foreach (string item in this)
+        //    {
+        //        if (item.Equals(mot))
+        //        {
+        //            trouve = true;
+        //        }
+        //    }
+        //    if (!trouve)
+        //    {
+        //        base.Add(mot);
+        //    }
+        //}
+        //public new void Remove(string mot)
+        //{
+        //    bool trouve = false;
+        //     foreach (string item in this)
+        //    {
+        //        if (item.Equals(mot))
+        //        {
+        //            trouve = true;
+        //        }
+        //    }
+        //    if (!trouve)
+        //    {
+        //        base.Remove(mot);
+        //    }
+        //}
         public void Pioche()
         {
             Random rand = new Random();
@@ -58,7 +58,7 @@ namespace TrouveLeMot
         public void SaveXML(string path)
         {
             XmlSerializer writer = new XmlSerializer(typeof(Lexique));
-            FileStream file = new FileStream(path,FileMode.OpenOrCreate,FileAccess.Write);
+            FileStream file = new FileStream(path,FileMode.Create,FileAccess.Write);
             writer.Serialize(file, this);
             file.Close();
         }

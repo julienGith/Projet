@@ -36,19 +36,35 @@ namespace Configuration
             foreach (XmlNode xNode in Xn)
             {
                 listBoxLex.Items.Add(xNode.InnerText);
-                lexique.Ajouter(xNode.InnerText);
+                lexique.Add(xNode.InnerText);
             }
         }
 
-
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        
         {
-            {
-                listBoxLex.Items.Add(txtBoxMot.Text);
-                lexique.Ajouter(txtBoxMot.Text);
-                lexique.SaveXML(@"test.xml");
-                txtBoxMot.Clear();
-            }
+            listBoxLex.Items.Add(txtBoxMot.Text);
+            lexique.Add(txtBoxMot.Text);
+            lexique.SaveXML(@"test.xml");
+            txtBoxMot.Clear();
+        }
+
+        private void BtnTransfert_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxCible.Items.Add(listBoxLex.SelectedItem);
+        }
+
+        private void BtnSupr_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxCible.Items.Remove(listBoxCible.SelectedItem);
+        }
+
+        private void BtnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            object selected = listBoxLex.SelectedItem.ToString();
+            lexique.Remove(selected.ToString());
+            lexique.SaveXML(@"test.xml");
+            listBoxLex.Items.Remove(listBoxLex.SelectedItem);
         }
     }
 }
