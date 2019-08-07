@@ -12,22 +12,22 @@ namespace TrouveLeMot
    public class Lexique : List<string>
     {
         public Lexique(){ }
-        
-        //public void Ajouter(string mot )
-        //{
-        //    bool trouve = false;
-        //    foreach (string item in this)
-        //    {
-        //        if (item.Equals(mot))
-        //        {
-        //            trouve = true;
-        //        }
-        //    }
-        //    if (!trouve)
-        //    {
-        //        base.Add(mot);
-        //    }
-        //}
+
+        public void Ajouter(string mot)
+        {
+            bool trouve = false;
+            foreach (string item in this)
+            {
+                if (item.Equals(mot))
+                {
+                    trouve = true;
+                }
+            }
+            if (!trouve)
+            {
+                base.Add(mot);
+            }
+        }
         //public new void Remove(string mot)
         //{
         //    bool trouve = false;

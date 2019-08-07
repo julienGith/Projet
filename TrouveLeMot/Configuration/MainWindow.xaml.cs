@@ -39,14 +39,46 @@ namespace Configuration
                 lexique.Add(xNode.InnerText);
             }
         }
+        private bool isSaisieValid(string saisie)
+        {
+            
+            for (int i = 0; i < saisie.Length; i++)
+            {
+                if (char.IsDigit(saisie[i]))
+                {
+                    return false;
+                }
+            }
+            if (listBoxLex.Items.Contains(saisie)) 
+            {
+                return false;
+            }
+            if (System.Text.RegularExpressions.Regex.IsMatch(saisie, "[/!@#?/}[}{]"))
+            {
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(saisie))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         
         {
-            listBoxLex.Items.Add(txtBoxMot.Text);
-            lexique.Add(txtBoxMot.Text);
-            lexique.SaveXML(@"test.xml");
-            txtBoxMot.Clear();
+            string saisie = txtBoxMot.Text;
+            if (isSaisieValid(saisie))
+            {
+                listBoxLex.Items.Add(saisie);
+                lexique.Ajouter(saisie);
+                lexique.SaveXML(@"test.xml");
+                txtBoxMot.Clear();
+            }
+            e.Handled = true;
         }
 
         private void BtnTransfert_Click(object sender, RoutedEventArgs e)
