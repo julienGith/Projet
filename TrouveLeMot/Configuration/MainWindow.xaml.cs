@@ -28,7 +28,11 @@ namespace Configuration
             InitializeComponent();
         }
         Lexique lexique = new Lexique();
-        
+        private void DisableBtn()
+        {
+            btnAdd.IsEnabled = false;
+            btnRemove.IsEnabled = false;
+        }
         private void ChargeLexique()
         {
             XmlDocument doc = new XmlDocument();
@@ -74,11 +78,11 @@ namespace Configuration
         
         {
             string saisie = txtBoxMot.Text;
-            int tMot = txtBoxMot.Text.Length;
+            
             if (isSaisieValid(saisie))
             {
                 listBoxLex.Items.Add(saisie);
-                lexique.Ajouter(saisie,tMot);
+                lexique.Ajouter(saisie);
                 lexique.SaveXML(@"test.xml");
                 txtBoxMot.Clear();
             }
@@ -106,6 +110,7 @@ namespace Configuration
 
         private void RBtnDifficile_Checked(object sender, RoutedEventArgs e)
         {
+            DisableBtn();
             listBoxLex.Items.Clear();
             XmlDocument doc = new XmlDocument();
             doc.Load(@"test.xml");
@@ -121,6 +126,7 @@ namespace Configuration
 
         private void RBtnExpert_Checked(object sender, RoutedEventArgs e)
         {
+            DisableBtn();
             listBoxLex.Items.Clear();
             XmlDocument doc = new XmlDocument();
             doc.Load(@"test.xml");
@@ -143,6 +149,8 @@ namespace Configuration
 
         private void RBtnFacile_Checked(object sender, RoutedEventArgs e)
         {
+            DisableBtn();
+
             listBoxLex.Items.Clear();
             XmlDocument doc = new XmlDocument();
             doc.Load(@"test.xml");

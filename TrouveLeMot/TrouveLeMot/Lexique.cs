@@ -12,7 +12,7 @@ namespace TrouveLeMot
    public class Lexique : List<string>
     {
         public Lexique(){ }
-        public void Ajouter(string mot,int tMot)
+        public void Ajouter(string mot)
         {
             bool trouve = false;
             
