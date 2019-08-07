@@ -22,11 +22,12 @@
         <Button x:Name="btnRemove" Content="Retirer du lexique" HorizontalAlignment="Left" Margin="68,235,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.829,0.474" Click="BtnRemove_Click"/>
         <Label Content="LEXIQUE" HorizontalAlignment="Left" Margin="66.928,61,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.25,0.457" Grid.Column="1"/>
         <Label Content="Liste des mots à trouver" HorizontalAlignment="Left" Margin="344.928,61,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <GroupBox Header="Difficulté du lexique" HorizontalAlignment="Left" Height="104" Margin="54,273,0,0" VerticalAlignment="Top" Width="184">
-            <StackPanel Margin="0,14,0,19">
-                <RadioButton Content="Facile : 5 à 8 caractères"/>
-                <RadioButton Content="Difficile : 8 à 10 caractères"/>
-                <RadioButton Content="Expert : plus de 10 caractères"/>
+        <GroupBox Header="Difficulté du lexique" HorizontalAlignment="Left" Height="126" Margin="54,273,0,0" VerticalAlignment="Top" Width="184">
+            <StackPanel Margin="0,10,0,19">
+                <RadioButton x:Name="rBtnPerso" Content="Pesonnalisé " IsChecked="True" Checked="RBtnPerso_Checked" />
+                <RadioButton x:Name="rBtnFacile" Content="Facile : 5 à 8 caractères" IsChecked="False" HorizontalAlignment="Right" Width="172" Checked="RBtnFacile_Checked" />
+                <RadioButton x:Name="rBtnDifficile" Content="Difficile : 8 à 10 caractères" Checked="RBtnDifficile_Checked"/>
+                <RadioButton x:Name="rBtnExpert" Content="Expert : plus de 10 caractères" HorizontalAlignment="Right" Width="172" Checked="RBtnExpert_Checked"/>
             </StackPanel>
         </GroupBox>
 

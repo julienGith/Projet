@@ -12,10 +12,10 @@ namespace TrouveLeMot
    public class Lexique : List<string>
     {
         public Lexique(){ }
-
-        public void Ajouter(string mot)
+        public void Ajouter(string mot,int tMot)
         {
             bool trouve = false;
+            
             foreach (string item in this)
             {
                 if (item.Equals(mot))
@@ -43,13 +43,13 @@ namespace TrouveLeMot
         //        base.Remove(mot);
         //    }
         //}
-        public void Pioche()
-        {
-            Random rand = new Random();
-            int aléatoire = 0;
-            aléatoire = rand.Next(0,this.Count - 1);
-            base.Add(this[aléatoire]);
-        }
+        //public void Pioche(string mot)
+        //{
+        //    Random rand = new Random();
+        //    int aléatoire = 0;
+        //    aléatoire = rand.Next(0,this.Count - 1);
+        //    base.Add(mot[aléatoire]);
+        //}
         #region 
         /// <summary>
         /// Methodes de sauvegarde/chargement du Lexique.

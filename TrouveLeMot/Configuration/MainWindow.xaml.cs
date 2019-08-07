@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,9 +26,9 @@ namespace Configuration
         public MainWindow()
         {
             InitializeComponent();
-            ChargeLexique();
         }
         Lexique lexique = new Lexique();
+        
         private void ChargeLexique()
         {
             XmlDocument doc = new XmlDocument();
@@ -36,7 +37,6 @@ namespace Configuration
             foreach (XmlNode xNode in Xn)
             {
                 listBoxLex.Items.Add(xNode.InnerText);
-                lexique.Add(xNode.InnerText);
             }
         }
         private bool isSaisieValid(string saisie)
@@ -60,6 +60,10 @@ namespace Configuration
             {
                 return false;
             }
+            if (saisie.Length<5)
+            {
+                return false;
+            }
             else
             {
                 return true;
@@ -70,10 +74,11 @@ namespace Configuration
         
         {
             string saisie = txtBoxMot.Text;
+            int tMot = txtBoxMot.Text.Length;
             if (isSaisieValid(saisie))
             {
                 listBoxLex.Items.Add(saisie);
-                lexique.Ajouter(saisie);
+                lexique.Ajouter(saisie,tMot);
                 lexique.SaveXML(@"test.xml");
                 txtBoxMot.Clear();
             }
@@ -99,9 +104,57 @@ namespace Configuration
             listBoxLex.Items.Remove(listBoxLex.SelectedItem);
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void RBtnDifficile_Checked(object sender, RoutedEventArgs e)
         {
+            listBoxLex.Items.Clear();
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"test.xml");
+            XmlNodeList Xn = doc.SelectNodes("//string");
+            foreach (XmlNode xNode in Xn)
+            {
+                if (xNode.InnerText.Length > 7 & xNode.InnerText.Length < 11 & !listBoxLex.Items.Contains(xNode.InnerText))
+                {
+                    listBoxLex.Items.Add(xNode.InnerText);
+                }
+            }
+        }
 
+        private void RBtnExpert_Checked(object sender, RoutedEventArgs e)
+        {
+            listBoxLex.Items.Clear();
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"test.xml");
+            XmlNodeList Xn = doc.SelectNodes("//string");
+            foreach (XmlNode xNode in Xn)
+            {
+                if (xNode.InnerText.Length > 11 & !listBoxLex.Items.Contains(xNode.InnerText))
+                {
+                    listBoxLex.Items.Add(xNode.InnerText);
+                }
+
+            }
+        }
+
+        private void RBtnPerso_Checked(object sender, RoutedEventArgs e)
+        {
+            listBoxLex.Items.Clear();
+            ChargeLexique();
+        }
+
+        private void RBtnFacile_Checked(object sender, RoutedEventArgs e)
+        {
+            listBoxLex.Items.Clear();
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"test.xml");
+            XmlNodeList Xn = doc.SelectNodes("//string");
+            foreach (XmlNode xNode in Xn)
+            {
+                if (xNode.InnerText.Length > 4 & xNode.InnerText.Length < 9 & !listBoxLex.Items.Contains(xNode.InnerText))
+                {
+                    listBoxLex.Items.Add(xNode.InnerText);
+                }
+
+            }
         }
     }
 }
