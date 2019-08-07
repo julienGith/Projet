@@ -7,4 +7,3 @@ C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\TrouveLeMot\obj\Debug\Trou
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\TrouveLeMot\obj\Debug\TrouveLeMot.csproj.CoreCompileInputs.cache
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\TrouveLeMot\obj\Debug\TrouveLeMot.exe
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\TrouveLeMot\obj\Debug\TrouveLeMot.pdb
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\TrouveLeMot\obj\Debug\TrouveLeMot.frmConfig.resources

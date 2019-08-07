@@ -17,3 +17,5 @@ C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Co
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration.csproj.CopyComplete
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration.exe
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration.pdb
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Jeu.g.cs
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Jeu.baml

@@ -20,7 +20,7 @@ namespace TrouveLeMot
             Application.SetCompatibleTextRenderingDefault(false);
             //Test();
 
-            Application.Run(new frmConfig());
+            //Application.Run(new frmConfig());
             
             
         }
