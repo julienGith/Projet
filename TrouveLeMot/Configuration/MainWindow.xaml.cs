@@ -41,7 +41,6 @@ namespace Configuration
         }
         private bool isSaisieValid(string saisie)
         {
-            
             for (int i = 0; i < saisie.Length; i++)
             {
                 if (char.IsDigit(saisie[i]))
@@ -98,6 +97,11 @@ namespace Configuration
             lexique.Remove(selected.ToString());
             lexique.SaveXML(@"test.xml");
             listBoxLex.Items.Remove(listBoxLex.SelectedItem);
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Configuration"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="916.031">
     <Grid Margin="0,0,-24,-20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="229*"/>
@@ -14,7 +14,7 @@
         <Button x:Name="btnAdd" Content="Ajouter au lexique" HorizontalAlignment="Left" Margin="68,193,0,0" VerticalAlignment="Top" Width="145" Click="BtnAdd_Click"/>
         <ListBox x:Name="listBoxLex" HorizontalAlignment="Left" Height="245" Margin="4.928,92,0,0" VerticalAlignment="Top" Width="196" Grid.Column="1"/>
         <TextBox x:Name="txtBoxMot" HorizontalAlignment="Left" Height="23" Margin="68,92,0,0" TextWrapping="Wrap" Text="Tapez un mot" VerticalAlignment="Top" Width="145" SpellCheck.IsEnabled="True"/>
-        
+
         <Button Content="Vérifiez l'orthographe" HorizontalAlignment="Left" Margin="68,134,0,0" VerticalAlignment="Top" Width="145"/>
         <ListBox x:Name="listBoxCible" HorizontalAlignment="Left" Height="245" Margin="315.928,92,0,0" VerticalAlignment="Top" Width="196" Grid.Column="1"/>
         <Button x:Name="btnTransfert" Content="&gt;" HorizontalAlignment="Left" Margin="221.928,118,0,0" VerticalAlignment="Top" Width="75" Click="BtnTransfert_Click" Grid.Column="1"/>
@@ -22,6 +22,13 @@
         <Button x:Name="btnRemove" Content="Retirer du lexique" HorizontalAlignment="Left" Margin="68,235,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.829,0.474" Click="BtnRemove_Click"/>
         <Label Content="LEXIQUE" HorizontalAlignment="Left" Margin="66.928,61,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.25,0.457" Grid.Column="1"/>
         <Label Content="Liste des mots à trouver" HorizontalAlignment="Left" Margin="344.928,61,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <GroupBox Header="Difficulté du lexique" HorizontalAlignment="Left" Height="104" Margin="54,273,0,0" VerticalAlignment="Top" Width="184">
+            <StackPanel Margin="0,14,0,19">
+                <RadioButton Content="Facile : 5 à 8 caractères"/>
+                <RadioButton Content="Difficile : 8 à 10 caractères"/>
+                <RadioButton Content="Expert : plus de 10 caractères"/>
+            </StackPanel>
+        </GroupBox>
 
     </Grid>
 </Window>
