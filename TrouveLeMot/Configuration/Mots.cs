@@ -11,6 +11,7 @@ namespace Configuration
     [Serializable()]
     public class Mots : List<string>
     {
+        private int _nombreMots;
         public Mots() { }
         public void Ajouter(string mot)
         {

@@ -9,6 +9,9 @@ namespace TrouveLeMot
 {
     public class Niveau
     {
-
+        private bool _perso;
+        private bool _facile;
+        private bool _difficile;
+        private bool _expert;
     }
 }
