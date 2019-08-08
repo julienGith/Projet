@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TrouveLeMot
 {
-    class Partie
+    public class Partie
     {
+
     }
 }

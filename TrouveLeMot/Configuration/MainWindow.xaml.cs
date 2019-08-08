@@ -29,6 +29,7 @@ namespace Configuration
         }
         Lexique lexique = new Lexique();
         Mots atrouver = new Mots();
+        Niveau niveau = new Niveau();
         /// <summary>
         /// Méthodes
         /// </summary>
@@ -100,6 +101,7 @@ namespace Configuration
         }
         private void NiveauDifficile()
         {
+            niveau.Difficile = true;         
             DisableBtn();
             listBoxLex.Items.Clear();
             XmlDocument doc = new XmlDocument();
@@ -115,6 +117,7 @@ namespace Configuration
         }
         private void NiveauExpert()
         {
+            niveau.Expert = true;
             DisableBtn();
             listBoxLex.Items.Clear();
             XmlDocument doc = new XmlDocument();
@@ -130,13 +133,14 @@ namespace Configuration
         }
         private void NiveauPerso()
         {
+            niveau.Perso = true;
             EnableBtn();
             ChargeLexique();
         }
         private void NiveauFacile()
         {
+            niveau.Facile = true;
             DisableBtn();
-
             listBoxLex.Items.Clear();
             XmlDocument doc = new XmlDocument();
             doc.Load(@"test.xml");
