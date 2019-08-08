@@ -15,7 +15,5 @@ namespace TrouveLeMot
         private int _nbPoinTemps;
         private string _motCach;
         private int _nbTrouve;
-
-
     }
 }
