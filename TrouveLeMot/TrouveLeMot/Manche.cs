@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace TrouveLeMot
 {
-    class Manche
+    public class Manche
     {
+        private int _temps;
+        private int _points;
+        private int _nbErreurs;
+        private int _nbPoinTemps;
+        private string _motCach;
+        private int _nbTrouve;
     }
 }
