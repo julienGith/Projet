@@ -29,6 +29,10 @@ namespace Configuration
         }
         Lexique lexique = new Lexique();
         Mots atrouver = new Mots();
+        /// <summary>
+        /// Méthodes
+        /// </summary>
+        #region
         private void EnableBtn()
         {
             btnAdd.IsEnabled = true;
@@ -159,6 +163,11 @@ namespace Configuration
             atrouver.SaveXML(@"mots choisis.xml");
             listBoxCible.Items.Remove(listBoxCible.SelectedItem);
         }
+        #endregion
+        /// <summary>
+        /// Bouttons
+        /// </summary>
+        #region
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             string mot = txtBoxMot.Text;
@@ -223,6 +232,6 @@ namespace Configuration
         //            break;
         //    }
         //}
-            
+        #endregion
     }
 }
