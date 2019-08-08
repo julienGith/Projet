@@ -28,6 +28,12 @@ namespace Configuration
             InitializeComponent();
         }
         Lexique lexique = new Lexique();
+        Mots atrouver = new Mots();
+        private void EnableBtn()
+        {
+            btnAdd.IsEnabled = true;
+            btnRemove.IsEnabled = true;
+        }
         private void DisableBtn()
         {
             btnAdd.IsEnabled = false;
@@ -41,30 +47,31 @@ namespace Configuration
             foreach (XmlNode xNode in Xn)
             {
                 listBoxLex.Items.Add(xNode.InnerText);
+                lexique.Ajouter(xNode.InnerText);
             }
         }
-        private bool isSaisieValid(string saisie)
+        private bool isSaisieValid(string mot)
         {
-            for (int i = 0; i < saisie.Length; i++)
+            for (int i = 0; i < mot.Length; i++)
             {
-                if (char.IsDigit(saisie[i]))
+                if (char.IsDigit(mot[i]))
                 {
                     return false;
                 }
             }
-            if (listBoxLex.Items.Contains(saisie)) 
+            if (listBoxLex.Items.Contains(mot)) 
             {
                 return false;
             }
-            if (System.Text.RegularExpressions.Regex.IsMatch(saisie, "[/!@#?/}[}{]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(mot, "[/!@#?/}[}{]"))
             {
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(saisie))
+            if (string.IsNullOrWhiteSpace(mot))
             {
                 return false;
             }
-            if (saisie.Length<5)
+            if (mot.Length<5)
             {
                 return false;
             }
@@ -73,42 +80,21 @@ namespace Configuration
                 return true;
             }
         }
-
-        private void BtnAdd_Click(object sender, RoutedEventArgs e)
-        
+        private void AjoutMot(string mot)
         {
-            string saisie = txtBoxMot.Text;
-            
-            if (isSaisieValid(saisie))
-            {
-                listBoxLex.Items.Add(saisie);
-                lexique.Ajouter(saisie);
-                lexique.SaveXML(@"test.xml");
-                txtBoxMot.Clear();
-            }
-            e.Handled = true;
+            listBoxLex.Items.Add(mot);
+            lexique.Ajouter(mot);
+            lexique.SaveXML(@"test.xml");
+            txtBoxMot.Clear();
         }
-
-        private void BtnTransfert_Click(object sender, RoutedEventArgs e)
-        {
-            listBoxCible.Items.Add(listBoxLex.SelectedItem);
-            listBoxLex.Items.Remove(listBoxLex.SelectedItem);
-        }
-        private void BtnSupr_Click(object sender, RoutedEventArgs e)
-        {
-            listBoxLex.Items.Add(listBoxCible.SelectedItem);
-            listBoxCible.Items.Remove(listBoxCible.SelectedItem);
-        }
-
-        private void BtnRemove_Click(object sender, RoutedEventArgs e)
+        private void RetireMot()
         {
             object selected = listBoxLex.SelectedItem.ToString();
             lexique.Remove(selected.ToString());
             lexique.SaveXML(@"test.xml");
             listBoxLex.Items.Remove(listBoxLex.SelectedItem);
         }
-
-        private void RBtnDifficile_Checked(object sender, RoutedEventArgs e)
+        private void NiveauDifficile()
         {
             DisableBtn();
             listBoxLex.Items.Clear();
@@ -123,8 +109,7 @@ namespace Configuration
                 }
             }
         }
-
-        private void RBtnExpert_Checked(object sender, RoutedEventArgs e)
+        private void NiveauExpert()
         {
             DisableBtn();
             listBoxLex.Items.Clear();
@@ -137,17 +122,14 @@ namespace Configuration
                 {
                     listBoxLex.Items.Add(xNode.InnerText);
                 }
-
             }
         }
-
-        private void RBtnPerso_Checked(object sender, RoutedEventArgs e)
+        private void NiveauPerso()
         {
-            listBoxLex.Items.Clear();
+            EnableBtn();
             ChargeLexique();
         }
-
-        private void RBtnFacile_Checked(object sender, RoutedEventArgs e)
+        private void NiveauFacile()
         {
             DisableBtn();
 
@@ -161,8 +143,86 @@ namespace Configuration
                 {
                     listBoxLex.Items.Add(xNode.InnerText);
                 }
-
             }
         }
+        private void Transfert()
+        {
+            listBoxCible.Items.Add(listBoxLex.SelectedItem);
+            atrouver.Ajouter(listBoxLex.SelectedItem.ToString());
+            atrouver.SaveXML(@"mots choisis.xml");
+            listBoxLex.Items.Remove(listBoxLex.SelectedItem);
+        }
+        private void Suppr()
+        {
+            listBoxLex.Items.Add(listBoxCible.SelectedItem);
+            atrouver.Remove(listBoxCible.SelectedItem.ToString());
+            atrouver.SaveXML(@"mots choisis.xml");
+            listBoxCible.Items.Remove(listBoxCible.SelectedItem);
+        }
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            string mot = txtBoxMot.Text;
+            if (isSaisieValid(mot))
+            {
+                AjoutMot(mot);
+            }
+            e.Handled = true;
+        }
+
+        private void BtnTransfert_Click(object sender, RoutedEventArgs e)
+        {
+            Transfert();
+        }
+        private void BtnSupr_Click(object sender, RoutedEventArgs e)
+        {
+            Suppr();
+        }
+        private void BtnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            RetireMot();
+        }
+
+        private void RBtnDifficile_Checked(object sender, RoutedEventArgs e)
+        {
+            NiveauDifficile();
+        }
+
+        private void RBtnExpert_Checked(object sender, RoutedEventArgs e)
+        {
+            NiveauExpert();
+        }
+
+        private void RBtnPerso_Checked(object sender, RoutedEventArgs e)
+        {
+            NiveauPerso();
+        }
+
+        private void RBtnFacile_Checked(object sender, RoutedEventArgs e)
+        {
+            NiveauFacile();
+        }
+        //private void RbNiveau()
+        //{
+        //    RadioButton radioBtn = new RadioButton();
+        //    switch (radioBtn.Name)
+        //    {
+        //        case "RBtnFacile":
+        //            NiveauFacile();
+        //            break;
+
+        //        case "RBtnPerso":
+        //            NiveauPerso();
+        //            break;
+
+        //        case "RBtnExpert":
+        //            NiveauExpert();
+        //            break;
+
+        //        case "RBtnDifficile":
+        //            NiveauDifficile();
+        //            break;
+        //    }
+        //}
+            
     }
 }

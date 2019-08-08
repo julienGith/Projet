@@ -28,26 +28,15 @@ namespace TrouveLeMot
                 base.Add(mot);
             }
         }
-        //public new void Remove(string mot)
-        //{
-        //    bool trouve = false;
-        //     foreach (string item in this)
-        //    {
-        //        if (item.Equals(mot))
-        //        {
-        //            trouve = true;
-        //        }
-        //    }
-        //    if (!trouve)
-        //    {
-        //        base.Remove(mot);
-        //    }
-        //}
+        public new void Remove(string mot)
+        {
+            base.Remove(mot);
+        }
         //public void Pioche(string mot)
         //{
         //    Random rand = new Random();
         //    int aléatoire = 0;
-        //    aléatoire = rand.Next(0,this.Count - 1);
+        //    aléatoire = rand.Next(0, this.Count - 1);
         //    base.Add(mot[aléatoire]);
         //}
         #region 
