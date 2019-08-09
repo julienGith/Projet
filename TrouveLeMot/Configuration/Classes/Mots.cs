@@ -12,6 +12,8 @@ namespace Configuration
     public class Mots : List<string>
     {
         private int _nombreMots;
+        public int NombreMots
+        { get; set; }
         public Mots() { }
         public void Ajouter(string mot)
         {

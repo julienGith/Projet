@@ -15,18 +15,25 @@ using System.Windows.Shapes;
 namespace Configuration
 {
     /// <summary>
-    /// Logique d'interaction pour Jeu.xaml
+    /// Logique d'interaction pour AccueilJeu.xaml
     /// </summary>
-    public partial class Jeu : Window
+    public partial class AccueilJeu : Window
     {
-        public Jeu()
+        public AccueilJeu()
         {
             InitializeComponent();
         }
 
         private void BtnOptions_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow option = new MainWindow();
+            option.ShowDialog();
+        }
 
+        private void BtnStart_Click(object sender, RoutedEventArgs e)
+        {
+            Jeu jeu = new Jeu();
+            jeu.ShowDialog();
         }
     }
 }

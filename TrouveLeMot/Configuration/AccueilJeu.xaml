@@ -1,0 +1,14 @@
+﻿<Window x:Class="Configuration.AccueilJeu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Configuration"
+        mc:Ignorable="d"
+        Title="AccueilJeu" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnOptions" Content="Configurer la partie" HorizontalAlignment="Left" Margin="70,113,0,0" VerticalAlignment="Top" Width="233" Height="184" Click="BtnOptions_Click"/>
+        <Button x:Name="btnStart" Content="Lancer la partie" HorizontalAlignment="Left" Margin="480,113,0,0" VerticalAlignment="Top" Width="233" Height="184" Click="BtnStart_Click"/>
+
+    </Grid>
+</Window>

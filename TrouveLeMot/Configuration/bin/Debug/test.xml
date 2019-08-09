@@ -1,6 +1,6 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <string>crocodile</string>
+  <string>crocodile</string>
   <string>gratte-ciel</string>
   <string>anticonstitutionnel</string>
   <string>estampiller</string>
@@ -14,4 +14,5 @@
   <string>ragondin</string>
   <string>libellule</string>
   <string>épistolaire</string>
+  <string>constructeur</string>
 </ArrayOfString>

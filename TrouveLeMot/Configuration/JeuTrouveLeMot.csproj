@@ -71,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AccueilJeu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Jeu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -79,10 +83,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AccueilJeu.xaml.cs">
+      <DependentUpon>AccueilJeu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Lexique.cs" />
+    <Compile Include="Classes\Options.cs" />
     <Compile Include="Jeu.xaml.cs">
       <DependentUpon>Jeu.xaml</DependentUpon>
     </Compile>
@@ -92,7 +101,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mots.cs" />
+    <Compile Include="Classes\Manche.cs" />
+    <Compile Include="Classes\Mots.cs" />
+    <Compile Include="Classes\Niveau.cs" />
+    <Compile Include="Classes\Partie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,12 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TrouveLeMot\TrouveLeMot.csproj">
-      <Project>{770dce37-6ac7-4654-b399-e4849f41f6b0}</Project>
-      <Name>TrouveLeMot</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

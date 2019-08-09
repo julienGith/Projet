@@ -6,25 +6,26 @@
         xmlns:local="clr-namespace:Configuration"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Configuration.MainWindow"
         mc:Ignorable="d"
-        Title="Options" Height="561.798" Width="916.031">
-    <Grid Margin="0,0,-24,-20">
+        Title="Options" Height="595.798" Width="993.031">
+    <Grid Margin="0,0,2,-20">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="47*"/>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="195*"/>
-            <ColumnDefinition Width="670*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="211*"/>
+            <ColumnDefinition Width="301*"/>
+            <ColumnDefinition Width="424*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnAdd" Content="Ajouter au lexique" HorizontalAlignment="Left" Margin="1,157,0,0" VerticalAlignment="Top" Width="145" Click="BtnAdd_Click" Grid.Column="2"/>
-        <ListBox x:Name="listBoxLex" HorizontalAlignment="Left" Height="397" Margin="5,92,0,0" VerticalAlignment="Top" Width="196" Grid.Column="3"/>
+        <Button x:Name="btnAdd" Content="Ajouter au lexique" HorizontalAlignment="Left" Margin="1,157,0,0" VerticalAlignment="Top" Width="145" Click="BtnAdd_Click" Grid.Column="2" Height="22"/>
+        <ListBox x:Name="listBoxLex" HorizontalAlignment="Left" Height="420" Margin="5,92,0,0" VerticalAlignment="Top" Width="268" Grid.Column="3"/>
         <TextBox x:Name="txtBoxMot" HorizontalAlignment="Left" Height="23" Margin="1,92,0,0" TextWrapping="Wrap" Text="Tapez un mot" VerticalAlignment="Top" Width="145" SpellCheck.IsEnabled="True" Grid.Column="2"/>
 
-        <Button Content="Vérifiez l'orthographe" HorizontalAlignment="Left" Margin="1,130,0,0" VerticalAlignment="Top" Width="145" Grid.Column="2"/>
-        <ListBox x:Name="listBoxCible" HorizontalAlignment="Left" Height="397" Margin="316,92,0,0" VerticalAlignment="Top" Width="196" Grid.Column="3"/>
-        <Button x:Name="btnTransfert" Content="&gt;" HorizontalAlignment="Left" Margin="222,118,0,0" VerticalAlignment="Top" Width="75" Click="BtnTransfert_Click" Grid.Column="3"/>
-        <Button x:Name="btnSupr" Content="&lt;" HorizontalAlignment="Left" Margin="222,177,0,0" VerticalAlignment="Top" Width="75" Click="BtnSupr_Click" Grid.Column="3"/>
-        <Button x:Name="btnRemove" Content="Retirer du lexique" HorizontalAlignment="Left" Margin="1,184,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.829,0.474" Click="BtnRemove_Click" Grid.Column="2"/>
-        <Label Content="LEXIQUE" HorizontalAlignment="Left" Margin="67,61,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.25,0.457" Grid.Column="3"/>
-        <Label Content="MOTS A TROUVER" HorizontalAlignment="Left" Margin="345,61,0,0" VerticalAlignment="Top" Grid.Column="3"/>
+        <Button Content="Vérifiez l'orthographe" HorizontalAlignment="Left" Margin="1,130,0,0" VerticalAlignment="Top" Width="145" Grid.Column="2" Height="22"/>
+        <ListBox x:Name="listBoxCible" HorizontalAlignment="Left" Height="420" Margin="112,92,0,0" VerticalAlignment="Top" Width="268" Grid.Column="4"/>
+        <Button x:Name="btnTransfert" Content="&gt;" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="75" Click="BtnTransfert_Click" Grid.Column="4" Height="22"/>
+        <Button x:Name="btnSupr" Content="&lt;" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="75" Click="BtnSupr_Click" Grid.Column="4" Height="22"/>
+        <Button x:Name="btnRemove" Content="Retirer du lexique" HorizontalAlignment="Left" Margin="1,184,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.829,0.474" Click="BtnRemove_Click" Grid.Column="2" Height="22"/>
+        <Label Content="LEXIQUE" HorizontalAlignment="Left" Margin="112,61,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.25,0.457" Grid.Column="3" Height="26"/>
+        <Label Content="MOTS A TROUVER" HorizontalAlignment="Left" Margin="182,61,0,0" VerticalAlignment="Top" Grid.Column="4" Height="26" Width="108"/>
         <GroupBox Header="Difficulté du lexique" HorizontalAlignment="Left" Height="126" Margin="7,273,0,0" VerticalAlignment="Top" Width="184" Grid.Column="1" Grid.ColumnSpan="2">
             <StackPanel Margin="0,10,0,19">
                 <RadioButton x:Name="rBtnPerso" Content="Pesonnalisé " IsChecked="True" Checked="RBtnPerso_Checked" />
@@ -33,11 +34,15 @@
                 <RadioButton x:Name="rBtnExpert" Content="Expert : plus de 10 caractères" HorizontalAlignment="Right" Width="172" Checked="RBtnExpert_Checked"/>
             </StackPanel>
         </GroupBox>
-        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="130,441,0,0" VerticalAlignment="Top" Maximum="600" Minimum="60" Increment="10" Grid.Column="2"/>
-        <Label Content="Points par lettre incorrecte" HorizontalAlignment="Left" Margin="10,463,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="3"/>
-        <Label Content="Durée d'une manche" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="3"/>
-        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="130,469,0,0" VerticalAlignment="Top" Grid.Column="2"/>
-        <Button x:Name="btnClose" Content="Fermer" Grid.Column="3" HorizontalAlignment="Left" Margin="544,489,0,0" VerticalAlignment="Top" Width="75"/>
+        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="130,461,0,0" VerticalAlignment="Top" Maximum="600" Minimum="60" Increment="10" Grid.Column="2" Height="20" Width="41" Value="60"/>
+        <Label Content="Points perdu par lettre incorrecte" HorizontalAlignment="Left" Margin="10,523,0,0" VerticalAlignment="Top" Width="185" Grid.ColumnSpan="3" Height="26"/>
+        <Label Content="Durée d'une manche" HorizontalAlignment="Left" Margin="10,455,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="3" Height="26"/>
+        <xctk:IntegerUpDown HorizontalAlignment="Left" Margin="130,526,0,0" VerticalAlignment="Top" Grid.Column="2" Height="20" Width="41" Maximum="3" Minimum="0" Value="0"/>
+        <Button x:Name="btnClose" Content="Fermer" Grid.Column="4" HorizontalAlignment="Left" Margin="305,527,0,0" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Label Content="Nombre de manches" HorizontalAlignment="Left" Margin="10,423,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="26" Width="121"/>
+        <xctk:IntegerUpDown Grid.Column="2" HorizontalAlignment="Left" Margin="130,429,0,0" VerticalAlignment="Top" Height="20" Width="41" Maximum="5" Minimum="1" Value="1"/>
+        <Label Content="Score de départ" HorizontalAlignment="Left" Margin="12,486,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="119"/>
+        <Label Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="130,486,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
