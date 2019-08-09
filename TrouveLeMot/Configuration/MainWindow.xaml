@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Configuration"
-        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Configuration.MainWindow"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:TrouveLeMot="clr-namespace:TrouveLeMot" x:Class="Configuration.MainWindow"
         mc:Ignorable="d"
         Title="Options" Height="644.798" Width="993.031">
     <Grid Margin="0,0,2,-20">
@@ -38,7 +38,7 @@
         <Label Content="Points perdu par lettre incorrecte" HorizontalAlignment="Left" Margin="10,572,0,0" VerticalAlignment="Top" Width="185" Grid.ColumnSpan="3" Height="26"/>
         <Label Content="Durée d'une manche" HorizontalAlignment="Left" Margin="10,455,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="3" Height="26"/>
         <xctk:IntegerUpDown x:Name="nupPtPerdu" HorizontalAlignment="Left" Margin="130,575,0,0" VerticalAlignment="Top" Grid.Column="2" Height="20" Width="41" Maximum="3" Minimum="0" Value="0"/>
-        <Button x:Name="btnClose" Content="Fermer" Grid.Column="4" HorizontalAlignment="Left" Margin="305,527,0,0" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Button x:Name="btnClose" Content="Fermer" Grid.Column="4" HorizontalAlignment="Left" Margin="305,576,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="BtnClose_Click"/>
         <Label Content="Nombre de manches" HorizontalAlignment="Left" Margin="10,423,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="26" Width="121"/>
         <xctk:IntegerUpDown x:Name="nupManches" Grid.Column="2" HorizontalAlignment="Left" Margin="130,429,0,0" VerticalAlignment="Top" Height="20" Width="41" Maximum="5" Minimum="1" Value="1" ValueChanged="NupManches_ValueChanged"/>
         <Label Content="Score de départ" HorizontalAlignment="Left" Margin="12,486,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="119"/>

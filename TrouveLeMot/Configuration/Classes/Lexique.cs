@@ -32,13 +32,6 @@ namespace TrouveLeMot
         {
             base.Remove(mot);
         }
-        //public void Pioche(string mot)
-        //{
-        //    Random rand = new Random();
-        //    int aléatoire = 0;
-        //    aléatoire = rand.Next(0, this.Count - 1);
-        //    base.Add(mot[aléatoire]);
-        //}
         #region 
         /// <summary>
         /// Methodes de sauvegarde/chargement du Lexique.

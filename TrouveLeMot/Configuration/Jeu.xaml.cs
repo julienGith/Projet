@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml;
+using TrouveLeMot;
+
 
 namespace Configuration
 {
@@ -19,6 +22,8 @@ namespace Configuration
     /// </summary>
     public partial class Jeu : Window
     {
+        Mots atrouver = new Mots();
+        
         public Jeu()
         {
             InitializeComponent();
@@ -28,5 +33,19 @@ namespace Configuration
         {
              
         }
+
+        private void TxtBmotCach_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"mots choisis.xml");
+            XmlNodeList Xn = doc.SelectNodes("//string");
+            foreach (XmlNode xNode in Xn)
+            {
+                atrouver.Ajouter(xNode.InnerText);
+            }
+            txtBmotCach.Text = atrouver.MotCach;
+        }
+
     }
 }

@@ -1,4 +1,4 @@
-﻿Configuration
+﻿TrouveLeMot
 
 
 winexe
@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\App.xaml
 31764120162
 
-13-900143429
+14-1954003104
 19-281216189
 AccueilJeu.xaml;Jeu.xaml;MainWindow.xaml;
 
-False
+True
 

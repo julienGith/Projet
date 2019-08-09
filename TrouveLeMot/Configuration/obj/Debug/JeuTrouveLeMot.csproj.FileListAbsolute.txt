@@ -1,11 +1,4 @@
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\App.g.cs
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration_MarkupCompile.cache
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration_MarkupCompile.lref
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration.exe
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration.pdb
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\Configuration.exe.config
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\Configuration.exe
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\Configuration.pdb
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\Xceed.Wpf.AvalonDock.dll
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
@@ -21,7 +14,6 @@ C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\ro
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration.g.resources
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration.Properties.Resources.resources
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csproj.GenerateResource.cache
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csproj.CoreCompileInputs.cache
@@ -33,3 +25,11 @@ C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Ac
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Jeu.g.cs
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\AccueilJeu.baml
 C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\Jeu.baml
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot_MarkupCompile.cache
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot_MarkupCompile.lref
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\TrouveLeMot.exe.config
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\TrouveLeMot.exe
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\bin\Debug\TrouveLeMot.pdb
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.g.resources
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.exe
+C:\Users\julio\Desktop\repoGithHub\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.pdb

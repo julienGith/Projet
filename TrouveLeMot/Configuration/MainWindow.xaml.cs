@@ -1,5 +1,4 @@
-﻿using Configuration.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -27,6 +26,7 @@ namespace Configuration
         public MainWindow()
         {
             InitializeComponent();
+            ChargeMots();
         }
         Lexique lexique = new Lexique();
         Mots atrouver = new Mots();
@@ -57,6 +57,28 @@ namespace Configuration
                 listBoxLex.Items.Add(xNode.InnerText);
                 lexique.Ajouter(xNode.InnerText);
             }
+        }
+        private void ChargeMots()
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"mots choisis.xml");
+            XmlNodeList Xn = doc.SelectNodes("//string");
+            foreach (XmlNode xNode in Xn)
+            {
+                listBoxCible.Items.Add(xNode.InnerText);
+                atrouver.Ajouter(xNode.InnerText);
+            }
+            //atrouver.LoadXML(@"mots choisis.xml");
+            //listBoxCible.ItemsSource = atrouver;
+            //foreach (string item in atrouver)
+            //{
+            //    listBoxCible.Items.Add(item);
+            //}
+            //listBoxCible.ItemsSource = atrouver.ToArray();
+            //for (int i = 0; i < atrouver.Count; i++)
+            //{
+            //    listBoxCible.Items.Add(atrouver.ElementAt(i));
+            //}
         }
         private bool isSaisieValid(string mot)
         {
@@ -245,6 +267,11 @@ namespace Configuration
         {
             int nbmanches = nupManches.Value.Value;
             options.NombreManches = nbmanches;
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

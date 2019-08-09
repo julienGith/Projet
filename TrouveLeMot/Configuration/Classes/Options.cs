@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
-namespace Configuration.Classes
+namespace TrouveLeMot
 {
+    [Serializable()]
     public class Options
     {
         private int _nombreManches;
@@ -18,5 +21,19 @@ namespace Configuration.Classes
         public int NbPoinTemps { get; set; }
         public int NbEssais { get; set; }
         public int ScoreDepart { get; set; }
+
+        public void SaveXML(string path)
+        {
+            XmlSerializer writer = new XmlSerializer(typeof(Lexique));
+            FileStream file = new FileStream(path, FileMode.Create, FileAccess.Write);
+            writer.Serialize(file, this);
+            file.Close();
+        }
+        public void LoadXML(string path)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Lexique));
+            FileStream file = new FileStream(path, FileMode.Open);
+            serializer.Deserialize(file);
+        }
     }
 }
