@@ -6,5 +6,7 @@
         xmlns:local="clr-namespace:Configuration"
         mc:Ignorable="d"
         Title="Jeu" Height="450" Width="800">
-    <Grid/>
+    <Grid>
+        <TextBox x:Name="txtbNbManches" HorizontalAlignment="Left" Height="70" Margin="631,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TxtbNbManches_TextChanged"/>
+    </Grid>
 </Window>

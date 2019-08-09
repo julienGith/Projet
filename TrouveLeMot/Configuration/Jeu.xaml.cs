@@ -24,9 +24,9 @@ namespace Configuration
             InitializeComponent();
         }
 
-        private void BtnOptions_Click(object sender, RoutedEventArgs e)
+        private void TxtbNbManches_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+             
         }
     }
 }

@@ -90,6 +90,8 @@ namespace Configuration
             }
             this._contentLoaded = true;
         }
+
+        internal System.Windows.Controls.TextBox txtbNbManches;
     }
 }
 

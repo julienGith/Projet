@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Configuration.Classes;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -31,6 +32,7 @@ namespace Configuration
         Mots atrouver = new Mots();
         Niveau niveau = new Niveau();
         Manche manche = new Manche();
+        Options options = new Options();
         /// <summary>
         /// Méthodes
         /// </summary>
@@ -238,5 +240,11 @@ namespace Configuration
         //    }
         //}
         #endregion
+
+        private void NupManches_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            int nbmanches = nupManches.Value.Value;
+            options.NombreManches = nbmanches;
+        }
     }
 }
