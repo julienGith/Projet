@@ -162,6 +162,7 @@ namespace Configuration
         }
         private void NiveauPerso()
         {
+            SupprDisable();
             niveau.Perso = true;
             EnableBtn();
             ChargeLexique();
@@ -199,6 +200,13 @@ namespace Configuration
             atrouver.Remove(listBoxCible.SelectedItem.ToString());
             atrouver.SaveXML(@"mots choisis.xml");
             listBoxCible.Items.Remove(listBoxCible.SelectedItem);
+        }
+        private void SupprDisable()
+        {
+            if (listBoxCible.Items.Count < 1)
+            {
+                btnSupr.IsEnabled = false;
+            }
         }
         #endregion
         /// <summary>
@@ -281,6 +289,18 @@ namespace Configuration
         private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void NupEssais_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            int essais = nupEssais.Value.Value;
+            options.NbEssais = essais;
+            options.SaveXML(@"Options.xml");
+        }
+
+        private void ListBoxCible_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SupprDisable();
         }
     }
 }

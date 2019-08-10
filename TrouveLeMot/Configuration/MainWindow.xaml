@@ -20,7 +20,7 @@
         <TextBox x:Name="txtBoxMot" HorizontalAlignment="Left" Height="23" Margin="1,92,0,0" TextWrapping="Wrap" Text="Tapez un mot" VerticalAlignment="Top" Width="145" SpellCheck.IsEnabled="True" Grid.Column="2"/>
 
         <Button Content="Vérifiez l'orthographe" HorizontalAlignment="Left" Margin="1,130,0,0" VerticalAlignment="Top" Width="145" Grid.Column="2" Height="22"/>
-        <ListBox x:Name="listBoxCible" HorizontalAlignment="Left" Height="420" Margin="112,92,0,0" VerticalAlignment="Top" Width="268" Grid.Column="4"/>
+        <ListBox x:Name="listBoxCible" HorizontalAlignment="Left" Height="420" Margin="112,92,0,0" VerticalAlignment="Top" Width="268" Grid.Column="4" SelectionChanged="ListBoxCible_SelectionChanged"/>
         <Button x:Name="btnTransfert" Content="&gt;" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="75" Click="BtnTransfert_Click" Grid.Column="4" Height="22"/>
         <Button x:Name="btnSupr" Content="&lt;" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="75" Click="BtnSupr_Click" Grid.Column="4" Height="22"/>
         <Button x:Name="btnRemove" Content="Retirer du lexique" HorizontalAlignment="Left" Margin="1,184,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.829,0.474" Click="BtnRemove_Click" Grid.Column="2" Height="22"/>
@@ -44,7 +44,7 @@
         <Label Content="Score de départ" HorizontalAlignment="Left" Margin="12,486,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="119"/>
         <Label x:Name="lblScore" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="130,486,0,0" VerticalAlignment="Top"/>
         <Label Content="Nombre d'essai" HorizontalAlignment="Left" Margin="12,527,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-0.154" Grid.ColumnSpan="3" Width="119"/>
-        <xctk:IntegerUpDown x:Name="nupEssais" Grid.Column="2" HorizontalAlignment="Left" Margin="127,533,0,0" VerticalAlignment="Top" Minimum="7" Value="7"/>
+        <xctk:IntegerUpDown x:Name="nupEssais" Grid.Column="2" HorizontalAlignment="Left" Margin="127,533,0,0" VerticalAlignment="Top" Minimum="7" Value="7" ValueChanged="NupEssais_ValueChanged"/>
 
     </Grid>
 </Window>

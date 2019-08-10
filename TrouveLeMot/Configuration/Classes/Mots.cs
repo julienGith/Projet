@@ -20,6 +20,10 @@ namespace Configuration
                 Random rand = new Random();
                 int aléatoire = 0;
                 aléatoire = rand.Next(0, this.Count);
+                if (this.Count<1)
+                {
+
+                }
                 return this[aléatoire];
             } }
         public Mots() { }

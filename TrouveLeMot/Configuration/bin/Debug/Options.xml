@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <NombreManches>5</NombreManches>
+  <NombreManches>3</NombreManches>
   <Temps>0</Temps>
   <NbPoinTemps>0</NbPoinTemps>
-  <NbEssais>0</NbEssais>
+  <NbEssais>19</NbEssais>
   <ScoreDepart>0</ScoreDepart>
 </Options>

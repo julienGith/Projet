@@ -32,9 +32,9 @@ namespace Configuration
         {
             InitializeComponent();
             options.LoadXML(@"Options.xml");
+            
         }
-
-        private void TxtBmotCach_TextChanged(object sender, TextChangedEventArgs e)
+        private void ChargeMots()
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(@"mots choisis.xml");
@@ -43,10 +43,14 @@ namespace Configuration
             {
                 atrouver.Ajouter(xNode.InnerText);
             }
-            
+
+        }
+        private void TxtBmotCach_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChargeMots();
             txtBmotCach.Text = atrouver.MotCach;
             atrouver.Remove(txtBmotCach.Text);
-
+            atrouver.SaveXML(@"mots choisis.xml");
         }
 
         private void TxtBnbManches_TextChanged(object sender, TextChangedEventArgs e)
@@ -65,20 +69,47 @@ namespace Configuration
 
         private void BtnNext_Click(object sender, RoutedEventArgs e)
         {
-            
             if (i<int.Parse(txtBnbManches.Text))
             {
-                atrouver.Remove(txtBmotCach.Text);
+                if (atrouver.Count>0)
+                {
+                 atrouver.Remove(txtBmotCach.Text);
+                }
                 txtBmotCach.Text = atrouver.MotCach;
-
                 txtBmanche.Text = (++i).ToString();
             }
-            
         }
 
         private void TxtBmanche_TextChanged(object sender, TextChangedEventArgs e)
         {
             txtBmanche.Text = i.ToString();
+        }
+
+        private void TxtBnbEssais_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"Options.xml");
+            XmlNodeList Xn = doc.SelectNodes("//NbEssais");
+            foreach (XmlNode xNode in Xn)
+            {
+                options.NbEssais = int.Parse(xNode.InnerText);
+
+            }
+            txtBnbEssais.Text = options.NbEssais.ToString();
+
+        }
+
+        private void TxtBessai_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txtBessai.Text = i.ToString();
+        }
+
+        private void BtnTry_Click(object sender, RoutedEventArgs e)
+        {
+            if (i < int.Parse(txtBnbEssais.Text))
+            {
+                txtBessai.Text = (++i).ToString();
+            }
         }
     }
 }
