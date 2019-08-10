@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="AccueilJeu" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnOptions" Content="Configurer la partie" HorizontalAlignment="Left" Margin="70,113,0,0" VerticalAlignment="Top" Width="233" Height="184" Click="BtnOptions_Click"/>
-        <Button x:Name="btnStart" Content="Lancer la partie" HorizontalAlignment="Left" Margin="480,113,0,0" VerticalAlignment="Top" Width="233" Height="184" Click="BtnStart_Click"/>
+        <Button x:Name="btnOptions" Content="Configurer la partie" HorizontalAlignment="Left" Margin="70,324,0,0" VerticalAlignment="Top" Width="162" Height="61" Click="BtnOptions_Click"/>
+        <Button x:Name="btnStart" Content="Lancer la partie" HorizontalAlignment="Left" Margin="303,324,0,0" VerticalAlignment="Top" Width="162" Height="61" Click="BtnStart_Click"/>
+        <Button x:Name="btnScores" Content="Scores" HorizontalAlignment="Left" Margin="536,324,0,0" VerticalAlignment="Top" Width="162" Height="61"/>
+        <TextBox x:Name="txtBpseudo" HorizontalAlignment="Left" Height="62" Margin="232,177,0,0" TextWrapping="Wrap" Text="Joueur 1" VerticalAlignment="Top" Width="282" FontSize="36"/>
 
     </Grid>
 </Window>

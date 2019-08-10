@@ -45,6 +45,7 @@ namespace Configuration
                 atrouver.Ajouter(xNode.InnerText);
             }
             txtBmotCach.Text = atrouver.MotCach;
+
         }
 
     }

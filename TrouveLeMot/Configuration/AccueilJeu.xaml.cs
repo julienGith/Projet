@@ -23,6 +23,7 @@ namespace Configuration
         {
             InitializeComponent();
         }
+        Joueur joueur = new Joueur();
 
         private void BtnOptions_Click(object sender, RoutedEventArgs e)
         {
