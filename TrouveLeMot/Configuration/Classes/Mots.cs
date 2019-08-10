@@ -25,7 +25,19 @@ namespace Configuration
         public Mots() { }
         public void Ajouter(string mot)
         {
-            base.Add(mot);
+            bool trouve = false;
+
+            foreach (string item in this)
+            {
+                if (item.Equals(mot))
+                {
+                    trouve = true;
+                }
+            }
+            if (!trouve)
+            {
+                base.Add(mot);
+            }
         }
         public new void Remove(string mot)
         {

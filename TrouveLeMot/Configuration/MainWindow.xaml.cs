@@ -105,6 +105,10 @@ namespace Configuration
             {
                 return false;
             }
+            if (listBoxCible.Items.Contains(mot))
+            {
+                return false;
+            }
             else
             {
                 return true;
@@ -180,10 +184,14 @@ namespace Configuration
         }
         private void Transfert()
         {
-            listBoxCible.Items.Add(listBoxLex.SelectedItem);
-            atrouver.Ajouter(listBoxLex.SelectedItem.ToString());
-            atrouver.SaveXML(@"mots choisis.xml");
-            listBoxLex.Items.Remove(listBoxLex.SelectedItem);
+            if (!listBoxCible.Items.Contains(listBoxLex.SelectedItem))
+            {
+                listBoxCible.Items.Add(listBoxLex.SelectedItem);
+                atrouver.Ajouter(listBoxLex.SelectedItem.ToString());
+                atrouver.SaveXML(@"mots choisis.xml");
+                listBoxLex.Items.Remove(listBoxLex.SelectedItem);
+            }
+
         }
         private void Suppr()
         {
@@ -265,8 +273,9 @@ namespace Configuration
 
         private void NupManches_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            int nbmanches = nupManches.Value.Value;
-            options.NombreManches = nbmanches;
+            int manches = nupManches.Value.Value;
+            options.NombreManches = manches;
+            options.SaveXML(@"Options.xml");
         }
 
         private void BtnClose_Click(object sender, RoutedEventArgs e)

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TrouveLeMot;
 
 namespace Configuration
 {
@@ -22,8 +23,10 @@ namespace Configuration
         public AccueilJeu()
         {
             InitializeComponent();
+            
         }
         Joueur joueur = new Joueur();
+        
 
         private void BtnOptions_Click(object sender, RoutedEventArgs e)
         {

@@ -49,6 +49,7 @@ namespace TrouveLeMot
             XmlSerializer serializer = new XmlSerializer(typeof(Lexique));
             FileStream file = new FileStream(path, FileMode.Open);
             serializer.Deserialize(file);
+            file.Close();
         }
         #endregion
     }

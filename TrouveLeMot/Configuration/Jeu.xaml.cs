@@ -23,20 +23,19 @@ namespace Configuration
     public partial class Jeu : Window
     {
         Mots atrouver = new Mots();
+        Options options = new Options();
+        int i = 1;
+        int j = 1;
         
+
         public Jeu()
         {
             InitializeComponent();
-        }
-
-        private void TxtbNbManches_TextChanged(object sender, TextChangedEventArgs e)
-        {
-             
+            options.LoadXML(@"Options.xml");
         }
 
         private void TxtBmotCach_TextChanged(object sender, TextChangedEventArgs e)
         {
-
             XmlDocument doc = new XmlDocument();
             doc.Load(@"mots choisis.xml");
             XmlNodeList Xn = doc.SelectNodes("//string");
@@ -44,9 +43,42 @@ namespace Configuration
             {
                 atrouver.Ajouter(xNode.InnerText);
             }
+            
             txtBmotCach.Text = atrouver.MotCach;
+            atrouver.Remove(txtBmotCach.Text);
 
         }
 
+        private void TxtBnbManches_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"Options.xml");
+            XmlNodeList Xn = doc.SelectNodes("//NombreManches");
+            foreach (XmlNode xNode in Xn)
+            {
+                options.NombreManches = int.Parse(xNode.InnerText);
+                
+            }
+            txtBnbManches.Text = options.NombreManches.ToString();
+            
+        }
+
+        private void BtnNext_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (i<int.Parse(txtBnbManches.Text))
+            {
+                atrouver.Remove(txtBmotCach.Text);
+                txtBmotCach.Text = atrouver.MotCach;
+
+                txtBmanche.Text = (++i).ToString();
+            }
+            
+        }
+
+        private void TxtBmanche_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txtBmanche.Text = i.ToString();
+        }
     }
 }

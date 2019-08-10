@@ -70,3 +70,5 @@ C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configur
 C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csproj.CopyComplete
 C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.exe
 C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.pdb
+C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configuration\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configuration\obj\Debug\App.baml

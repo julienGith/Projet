@@ -17,23 +17,31 @@ namespace TrouveLeMot
         private int _nbEssais;
         private int _scoreDepart;
         public int NombreManches { get; set; }
-        public int Temps { get; set; }
-        public int NbPoinTemps { get; set; }
-        public int NbEssais { get; set; }
+        public int Temps { get { return _temps; } set {  } }
+        public int NbPoinTemps { get { return _nbPoinTemps; } set {  } }
+        public int NbEssais { get { return _nbEssais; } set {  } }
         public int ScoreDepart { get; set; }
-
+        public Options() { }
+        public Options(int NombreManches = 1, int Temps = 60, int NbPoinTemps=1, int NbEssais=7)
+        {
+            this.NombreManches = NombreManches;
+            this.Temps = Temps;
+            this.NbPoinTemps = NbPoinTemps;
+            this.NbEssais = NbEssais;
+        }
         public void SaveXML(string path)
         {
-            XmlSerializer writer = new XmlSerializer(typeof(Lexique));
+            XmlSerializer writer = new XmlSerializer(typeof(Options));
             FileStream file = new FileStream(path, FileMode.Create, FileAccess.Write);
             writer.Serialize(file, this);
             file.Close();
         }
         public void LoadXML(string path)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Lexique));
+            XmlSerializer serializer = new XmlSerializer(typeof(Options));
             FileStream file = new FileStream(path, FileMode.Open);
             serializer.Deserialize(file);
+            file.Close();
         }
     }
 }
