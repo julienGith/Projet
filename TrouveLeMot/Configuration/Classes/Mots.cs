@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace TrouveLeMot
+namespace Configuration
 {
     [Serializable()]
     public class Mots : List<string>
