@@ -45,7 +45,11 @@ namespace Configuration
         }
         public new void Remove(string mot)
         {
-            base.Remove(mot);
+            if (this.Count>1)
+            {
+                base.Remove(mot);
+            }
+            
         }
         //public void Pioche()
         //{

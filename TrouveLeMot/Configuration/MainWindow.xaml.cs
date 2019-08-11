@@ -162,7 +162,6 @@ namespace Configuration
         }
         private void NiveauPerso()
         {
-            SupprDisable();
             niveau.Perso = true;
             EnableBtn();
             ChargeLexique();

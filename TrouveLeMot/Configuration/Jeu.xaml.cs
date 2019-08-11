@@ -47,6 +47,7 @@ namespace Configuration
         }
         private void TxtBmotCach_TextChanged(object sender, TextChangedEventArgs e)
         {
+            
             ChargeMots();
             txtBmotCach.Text = atrouver.MotCach;
             atrouver.Remove(txtBmotCach.Text);
@@ -106,10 +107,35 @@ namespace Configuration
 
         private void BtnTry_Click(object sender, RoutedEventArgs e)
         {
+            char[] tabMotCach = txtBmotCach.Text.ToCharArray();
+            char[] tabMotJoueur = txtBjoueur.Text.ToCharArray();
+            foreach (char item in tabMotJoueur)
+            {
+                if (tabMotCach.Contains(item) & !txtBlettres.Text.Contains(item.ToString()))
+                {
+                    
+                    txtBlettres.Text += item.ToString();
+                }
+            }
+            if (txtBjoueur.Text == txtBmotCach.Text)
+            {
+                
+            }
             if (i < int.Parse(txtBnbEssais.Text))
             {
                 txtBessai.Text = (++i).ToString();
             }
         }
+
+        private void TxtBjoueur_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void LstBlettres_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
     }
 }
