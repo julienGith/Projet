@@ -70,6 +70,10 @@ namespace Configuration
 
         private void BtnNext_Click(object sender, RoutedEventArgs e)
         {
+            lblWinOrLose.Content = "";
+            txtBlettres.Text = "";
+            txtBnote.Text = "Aidez-vous en formant des mots avec les lettres trouvées. Les lettres trouvées peuvent être présentes plusieurs fois dans le mot caché. ";
+            txtBjoueur.Text = "Entrez un mot ou des lettres et tentez";
             if (i<int.Parse(txtBnbManches.Text))
             {
                 if (atrouver.Count>0)
@@ -119,23 +123,16 @@ namespace Configuration
             }
             if (txtBjoueur.Text == txtBmotCach.Text)
             {
-                
+                lblWinOrLose.Content = "Bravo ! Vous avez trouvé le mot caché";
+            }
+            if (txtBessai.Text==txtBnbEssais.Text)
+            {
+                lblWinOrLose.Content = "Perdu !";
             }
             if (i < int.Parse(txtBnbEssais.Text))
             {
                 txtBessai.Text = (++i).ToString();
             }
         }
-
-        private void TxtBjoueur_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void LstBlettres_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
     }
 }
