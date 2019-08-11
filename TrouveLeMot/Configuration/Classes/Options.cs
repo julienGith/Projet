@@ -17,7 +17,7 @@ namespace TrouveLeMot
         private int _nbEssais;
         private int _scoreDepart;
         public int NombreManches { get; set; }
-        public int Temps { get { return _temps; } set {  } }
+        public int Temps { get; set; }
         public int NbPoinTemps { get { return _nbPoinTemps; } set {  } }
         public int NbEssais { get; set; }
         public int ScoreDepart { get; set; }

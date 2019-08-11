@@ -39,5 +39,11 @@ namespace Configuration
             Jeu jeu = new Jeu();
             jeu.ShowDialog();
         }
+
+        private void TxtBpseudo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            joueur.Pseudo = txtBpseudo.Text;
+            joueur.SaveXML(@"Joueurs.xml");
+        }
     }
 }

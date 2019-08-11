@@ -15,8 +15,8 @@
         <Label Content="/" HorizontalAlignment="Left" Margin="676,48,0,0" VerticalAlignment="Top" Width="15"/>
         <GroupBox Header="ESSAIS" HorizontalAlignment="Left" Height="59" Margin="646,90,0,0" VerticalAlignment="Top" Width="77"/>
         <Label Content="/" HorizontalAlignment="Left" Margin="676,115,0,0" VerticalAlignment="Top" Width="15"/>
-        <GroupBox Header="CHRONO" HorizontalAlignment="Left" Height="60" Margin="646,164,0,0" VerticalAlignment="Top" Width="70"/>
-        <Label Content="300" HorizontalAlignment="Left" Margin="664,190,0,0" VerticalAlignment="Top" Width="30"/>
+        <GroupBox Header="CHRONO" HorizontalAlignment="Left" Height="81" Margin="630,164,0,0" VerticalAlignment="Top" Width="103"/>
+        <Label Content="/" HorizontalAlignment="Left" Margin="673,198,0,0" VerticalAlignment="Top" Width="15" Height="23"/>
         <TextBox x:Name="txtBmanche" HorizontalAlignment="Left" Height="23" Margin="657,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="19" TextChanged="TxtBmanche_TextChanged"/>
         <TextBox x:Name="txtBnbManches" HorizontalAlignment="Left" Height="23" Margin="691,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="19" TextChanged="TxtBnbManches_TextChanged"/>
         <TextBox x:Name="txtBnbEssais" HorizontalAlignment="Left" Height="23" Margin="691,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="25" TextChanged="TxtBnbEssais_TextChanged"/>
@@ -25,5 +25,7 @@
         <TextBox x:Name="txtBnote" HorizontalAlignment="Left" Height="76" Margin="145,148,0,0" TextWrapping="Wrap" Text="Aidez-vous en formant des mots avec les lettres trouvées. Les lettres trouvées peuvent être présentes plusieurs fois dans le mot caché. " VerticalAlignment="Top" Width="274"/>
         <Label x:Name="lblWinOrLose" Content="" HorizontalAlignment="Left" Margin="145,84,0,0" VerticalAlignment="Top" Width="274"/>
         <Button Content="Vérifier l'orthographe" HorizontalAlignment="Left" Margin="145,288,0,0" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="txtBcompteur" HorizontalAlignment="Left" Height="23" Margin="639,198,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="29" TextChanged="TxtBcompteur_TextChanged"/>
+        <TextBox x:Name="txtBtemps" HorizontalAlignment="Left" Height="23" Margin="696,198,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="29" TextChanged="TxtBtemps_TextChanged"/>
     </Grid>
 </Window>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -26,7 +27,7 @@ namespace Configuration
         Options options = new Options();
         int i = 1;
         int j = 1;
-        
+        Timer chrono = new Timer();
 
         public Jeu()
         {
@@ -134,5 +135,26 @@ namespace Configuration
                 txtBessai.Text = (++i).ToString();
             }
         }
+
+        private void TxtBtemps_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"Options.xml");
+            XmlNodeList Xn = doc.SelectNodes("//Temps");
+            foreach (XmlNode xNode in Xn)
+            {
+                options.Temps = int.Parse(xNode.InnerText);
+
+            }
+            txtBtemps.Text = options.Temps.ToString();
+        }
+
+        private void TxtBcompteur_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            chrono.Interval = 1000;
+            chrono.Enabled = true;
+            
+        }
+
     }
 }

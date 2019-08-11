@@ -34,7 +34,7 @@
                 <RadioButton x:Name="rBtnExpert" Content="Expert : plus de 10 caractères" HorizontalAlignment="Right" Width="172" Checked="RBtnExpert_Checked"/>
             </StackPanel>
         </GroupBox>
-        <xctk:IntegerUpDown x:Name="nupDurée" HorizontalAlignment="Left" Margin="130,461,0,0" VerticalAlignment="Top" Maximum="600" Minimum="60" Increment="10" Grid.Column="2" Height="20" Width="41" Value="60"/>
+        <xctk:IntegerUpDown x:Name="nupDurée" HorizontalAlignment="Left" Margin="130,461,0,0" VerticalAlignment="Top" Maximum="600" Minimum="60" Increment="10" Grid.Column="2" Height="20" Width="41" Value="60" ValueChanged="NupDurée_ValueChanged"/>
         <Label Content="Points perdu par lettre incorrecte" HorizontalAlignment="Left" Margin="10,572,0,0" VerticalAlignment="Top" Width="185" Grid.ColumnSpan="3" Height="26"/>
         <Label Content="Durée d'une manche" HorizontalAlignment="Left" Margin="10,455,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="3" Height="26"/>
         <xctk:IntegerUpDown x:Name="nupPtPerdu" HorizontalAlignment="Left" Margin="130,575,0,0" VerticalAlignment="Top" Grid.Column="2" Height="20" Width="41" Maximum="3" Minimum="0" Value="0"/>

@@ -14,8 +14,8 @@ namespace Configuration
         private string _pseudo;
         private int[] _scores;
 
-        public string Pseudo { get => _pseudo; set => _pseudo = value; }
-        public int[] Scores { get => _scores; set => _scores = value; }
+        public string Pseudo { get; set; }
+        public int[] Scores { get ; set; }
 
         public Joueur() { }
 

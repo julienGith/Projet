@@ -301,5 +301,12 @@ namespace Configuration
         {
             SupprDisable();
         }
+
+        private void NupDurée_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            int durée = nupDurée.Value.Value;
+            options.Temps = durée;
+            options.SaveXML(@"Options.xml");
+        }
     }
 }
