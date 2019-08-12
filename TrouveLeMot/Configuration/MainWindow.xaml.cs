@@ -68,17 +68,6 @@ namespace Configuration
                 listBoxCible.Items.Add(xNode.InnerText);
                 atrouver.Ajouter(xNode.InnerText);
             }
-            //atrouver.LoadXML(@"mots choisis.xml");
-            //listBoxCible.ItemsSource = atrouver;
-            //foreach (string item in atrouver)
-            //{
-            //    listBoxCible.Items.Add(item);
-            //}
-            //listBoxCible.ItemsSource = atrouver.ToArray();
-            //for (int i = 0; i < atrouver.Count; i++)
-            //{
-            //    listBoxCible.Items.Add(atrouver.ElementAt(i));
-            //}
         }
         private bool isSaisieValid(string mot)
         {
@@ -221,7 +210,10 @@ namespace Configuration
             }
             e.Handled = true;
         }
-
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
         private void BtnTransfert_Click(object sender, RoutedEventArgs e)
         {
             Transfert();
@@ -284,28 +276,18 @@ namespace Configuration
             options.NombreManches = manches;
             options.SaveXML(@"Options.xml");
         }
-
-        private void BtnClose_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void NupEssais_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            int essais = nupEssais.Value.Value;
-            options.NbEssais = essais;
+            options.NbEssais = nupEssais.Value.Value;
             options.SaveXML(@"Options.xml");
         }
-
         private void ListBoxCible_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SupprDisable();
         }
-
         private void NupDurée_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            int durée = nupDurée.Value.Value;
-            options.Temps = durée;
+            options.Temps = nupDurée.Value.Value;
             options.SaveXML(@"Options.xml");
         }
     }

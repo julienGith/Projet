@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
 using TrouveLeMot;
+using System.Windows.Threading;
 
 
 namespace Configuration
@@ -26,14 +27,21 @@ namespace Configuration
         Mots atrouver = new Mots();
         Options options = new Options();
         int i = 1;
-        int j = 1;
-        Timer chrono = new Timer();
+        int j = 0;
+        DispatcherTimer chrono = new DispatcherTimer();
 
         public Jeu()
         {
             InitializeComponent();
             options.LoadXML(@"Options.xml");
-            
+            chrono.Start();
+            chrono.Tick += chrono_Tick;
+            chrono.Interval = new TimeSpan(0, 0, 1);
+        }
+        private void chrono_Tick(object sender, EventArgs e)
+        {
+            j++;
+            txtBcompteur.Text = j.ToString();
         }
         private void ChargeMots()
         {
@@ -125,6 +133,7 @@ namespace Configuration
             if (txtBjoueur.Text == txtBmotCach.Text)
             {
                 lblWinOrLose.Content = "Bravo ! Vous avez trouvé le mot caché";
+                chrono.Stop();
             }
             if (txtBessai.Text==txtBnbEssais.Text)
             {
@@ -151,9 +160,11 @@ namespace Configuration
 
         private void TxtBcompteur_TextChanged(object sender, TextChangedEventArgs e)
         {
-            chrono.Interval = 1000;
-            chrono.Enabled = true;
-            
+            if (txtBcompteur.Text == options.Temps.ToString())
+            {
+                chrono.Stop();
+                lblWinOrLose.Content = "Perdu ! temps écoulé";
+            }
         }
 
     }
