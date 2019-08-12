@@ -291,5 +291,12 @@ namespace Configuration
             options.Temps = nupDurée.Value.Value;
             options.SaveXML(@"Options.xml");
         }
+
+        private void BtnTri_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxLex.Items.SortDescriptions.Add(
+            new System.ComponentModel.SortDescription("",
+            System.ComponentModel.ListSortDirection.Ascending));
+        }
     }
 }
