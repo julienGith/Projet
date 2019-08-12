@@ -26,6 +26,7 @@ namespace Configuration
     {
         Mots atrouver = new Mots();
         Options options = new Options();
+        Joueur joueur = new Joueur();
         DispatcherTimer chrono = new DispatcherTimer();
         int i = 1;
         int j = 0;
@@ -36,6 +37,7 @@ namespace Configuration
             InitializeComponent();
             options.LoadXML(@"Options.xml");
             Chrono();
+            joueur.LoadXML(@"Joueurs.xml");
         }
         /// <summary>
         /// Methodes
@@ -137,12 +139,15 @@ namespace Configuration
         #region
         private void BtnNext_Click(object sender, RoutedEventArgs e)
         {
+            j = 0;
+            chrono.Start();
             lblWinOrLose.Content = "";
             txtBlettres.Text = "";
             txtBnote.Text = "Aidez-vous en formant des mots avec les lettres trouvées. Les lettres trouvées peuvent être présentes plusieurs fois dans le mot caché. ";
             txtBjoueur.Text = "Entrez un mot ou des lettres et tentez";
             if (i < int.Parse(txtBnbManches.Text))
             {
+                joueur.SaveXML(@"Joueurs.xml");
                 if (atrouver.Count > 0)
                 {
                     atrouver.Remove(txtBmotCach.Text);
@@ -169,6 +174,8 @@ namespace Configuration
                 chrono.Stop();
                 int score = options.Temps - int.Parse(txtBcompteur.Text) - penalty;
                 lblScore.Content = score.ToString();
+                joueur.Scores += score;
+
             }
             if (txtBessai.Text == txtBnbEssais.Text)
             {

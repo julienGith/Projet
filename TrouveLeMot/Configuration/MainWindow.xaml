@@ -43,8 +43,8 @@
         <xctk:IntegerUpDown x:Name="nupManches" FormatString="N0" Grid.Column="2" HorizontalAlignment="Left" Margin="127,448,0,0" VerticalAlignment="Top" Height="20" Width="41" Maximum="5" Minimum="1" Value="1" ValueChanged="NupManches_ValueChanged"/>
         <Label Content="Nombre d'essai" HorizontalAlignment="Left" Margin="15,497,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.737,-0.154" Grid.ColumnSpan="3" Width="119"/>
         <xctk:IntegerUpDown x:Name="nupEssais" Grid.Column="2" HorizontalAlignment="Left" Margin="127,502,0,0" VerticalAlignment="Top" Minimum="7" Value="7" ValueChanged="NupEssais_ValueChanged"/>
-        <Button x:Name="btnTri" Content="Ordre alaphabétique" Grid.Column="3" HorizontalAlignment="Left" Margin="153,531,0,0" VerticalAlignment="Top" Width="120" Click="BtnTri_Click"/>
-        <GroupBox x:Name="gpBoptions" Header="Options" HorizontalAlignment="Left" Height="135" Margin="15,418,0,0" VerticalAlignment="Top" Width="226" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnTri" Content="Ordre alaphabétique" Grid.Column="3" HorizontalAlignment="Left" Margin="153,537,0,0" VerticalAlignment="Top" Width="120" Click="BtnTri_Click"/>
+        <GroupBox x:Name="gpBoptions" Header="Options" HorizontalAlignment="Left" Height="141" Margin="15,418,0,0" VerticalAlignment="Top" Width="237" Grid.ColumnSpan="3"/>
         <GroupBox Grid.Column="1" Header="Alimenter le lexique" HorizontalAlignment="Left" Height="170" Margin="7,78,0,0" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
 
     </Grid>

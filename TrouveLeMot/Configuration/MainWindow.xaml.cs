@@ -226,22 +226,25 @@ namespace Configuration
         {
             RetireMot();
         }
+        private void BtnTri_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxLex.Items.SortDescriptions.Add(
+            new System.ComponentModel.SortDescription("",
+            System.ComponentModel.ListSortDirection.Ascending));
+        }
 
         private void RBtnDifficile_Checked(object sender, RoutedEventArgs e)
         {
             NiveauDifficile();
         }
-
         private void RBtnExpert_Checked(object sender, RoutedEventArgs e)
         {
             NiveauExpert();
         }
-
         private void RBtnPerso_Checked(object sender, RoutedEventArgs e)
         {
             NiveauPerso();
         }
-
         private void RBtnFacile_Checked(object sender, RoutedEventArgs e)
         {
             NiveauFacile();
@@ -291,14 +294,6 @@ namespace Configuration
             options.Temps = nupDurée.Value.Value;
             options.SaveXML(@"Options.xml");
         }
-
-        private void BtnTri_Click(object sender, RoutedEventArgs e)
-        {
-            listBoxLex.Items.SortDescriptions.Add(
-            new System.ComponentModel.SortDescription("",
-            System.ComponentModel.ListSortDirection.Ascending));
-        }
-
         private void NupPtPerdu_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             options.NbPoinPerdus = nupPtPerdu.Value.Value;
