@@ -298,5 +298,11 @@ namespace Configuration
             new System.ComponentModel.SortDescription("",
             System.ComponentModel.ListSortDirection.Ascending));
         }
+
+        private void NupPtPerdu_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            options.NbPoinPerdus = nupPtPerdu.Value.Value;
+            options.SaveXML(@"Options.xml");
+        }
     }
 }
