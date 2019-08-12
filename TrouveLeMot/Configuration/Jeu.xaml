@@ -27,5 +27,7 @@
         <Button Content="Vérifier l'orthographe" HorizontalAlignment="Left" Margin="145,288,0,0" VerticalAlignment="Top" Width="151"/>
         <TextBox x:Name="txtBcompteur" HorizontalAlignment="Left" Height="23" Margin="639,198,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="29" TextChanged="TxtBcompteur_TextChanged"/>
         <TextBox x:Name="txtBtemps" HorizontalAlignment="Left" Height="23" Margin="696,198,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="29" TextChanged="TxtBtemps_TextChanged"/>
+        <Label x:Name="lblPenalty" Content="Label" HorizontalAlignment="Left" Margin="657,259,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblScore" Content="Label" HorizontalAlignment="Left" Margin="657,292,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

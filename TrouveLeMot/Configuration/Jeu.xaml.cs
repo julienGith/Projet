@@ -122,6 +122,7 @@ namespace Configuration
         {
             char[] tabMotCach = txtBmotCach.Text.ToCharArray();
             char[] tabMotJoueur = txtBjoueur.Text.ToCharArray();
+            int penalty = int.Parse(txtBessai.Text);
             foreach (char item in tabMotJoueur)
             {
                 if (tabMotCach.Contains(item) & !txtBlettres.Text.Contains(item.ToString()))
@@ -134,6 +135,8 @@ namespace Configuration
             {
                 lblWinOrLose.Content = "Bravo ! Vous avez trouvé le mot caché";
                 chrono.Stop();
+                int score = options.Temps - int.Parse(txtBcompteur.Text) - penalty;
+                lblScore.Content = score.ToString();
             }
             if (txtBessai.Text==txtBnbEssais.Text)
             {
