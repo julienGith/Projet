@@ -18,6 +18,7 @@ namespace Configuration
         public int[] Scores { get ; set; }
 
         public Joueur() { }
+        
 
         public void SaveXML(string path)
         {

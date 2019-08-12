@@ -246,6 +246,7 @@ namespace Configuration
         {
             NiveauFacile();
         }
+       // A implémenter afin de simplifier le code
         //private void RbNiveau()
         //{
         //    RadioButton radioBtn = new RadioButton();

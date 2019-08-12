@@ -26,22 +26,26 @@ namespace Configuration
     {
         Mots atrouver = new Mots();
         Options options = new Options();
+        DispatcherTimer chrono = new DispatcherTimer();
         int i = 1;
         int j = 0;
-        DispatcherTimer chrono = new DispatcherTimer();
+        
 
         public Jeu()
         {
             InitializeComponent();
             options.LoadXML(@"Options.xml");
+            Chrono();
+        }
+        /// <summary>
+        /// Methodes
+        /// </summary>
+        #region
+        private void Chrono()
+        {
             chrono.Start();
             chrono.Tick += chrono_Tick;
             chrono.Interval = new TimeSpan(0, 0, 1);
-        }
-        private void chrono_Tick(object sender, EventArgs e)
-        {
-            j++;
-            txtBcompteur.Text = j.ToString();
         }
         private void ChargeMots()
         {
@@ -54,6 +58,16 @@ namespace Configuration
             }
 
         }
+        #endregion
+        /// <summary>
+        /// Evènements
+        /// </summary>
+        #region
+        private void chrono_Tick(object sender, EventArgs e)
+        {
+            j++;
+            txtBcompteur.Text = j.ToString();
+        }
         private void TxtBmotCach_TextChanged(object sender, TextChangedEventArgs e)
         {
             
@@ -62,7 +76,6 @@ namespace Configuration
             atrouver.Remove(txtBmotCach.Text);
             atrouver.SaveXML(@"mots choisis.xml");
         }
-
         private void TxtBnbManches_TextChanged(object sender, TextChangedEventArgs e)
         {
             XmlDocument doc = new XmlDocument();
@@ -76,29 +89,10 @@ namespace Configuration
             txtBnbManches.Text = options.NombreManches.ToString();
             
         }
-
-        private void BtnNext_Click(object sender, RoutedEventArgs e)
-        {
-            lblWinOrLose.Content = "";
-            txtBlettres.Text = "";
-            txtBnote.Text = "Aidez-vous en formant des mots avec les lettres trouvées. Les lettres trouvées peuvent être présentes plusieurs fois dans le mot caché. ";
-            txtBjoueur.Text = "Entrez un mot ou des lettres et tentez";
-            if (i<int.Parse(txtBnbManches.Text))
-            {
-                if (atrouver.Count>0)
-                {
-                 atrouver.Remove(txtBmotCach.Text);
-                }
-                txtBmotCach.Text = atrouver.MotCach;
-                txtBmanche.Text = (++i).ToString();
-            }
-        }
-
         private void TxtBmanche_TextChanged(object sender, TextChangedEventArgs e)
         {
             txtBmanche.Text = i.ToString();
         }
-
         private void TxtBnbEssais_TextChanged(object sender, TextChangedEventArgs e)
         {
             XmlDocument doc = new XmlDocument();
@@ -112,42 +106,10 @@ namespace Configuration
             txtBnbEssais.Text = options.NbEssais.ToString();
 
         }
-
         private void TxtBessai_TextChanged(object sender, TextChangedEventArgs e)
         {
             txtBessai.Text = i.ToString();
         }
-
-        private void BtnTry_Click(object sender, RoutedEventArgs e)
-        {
-            char[] tabMotCach = txtBmotCach.Text.ToCharArray();
-            char[] tabMotJoueur = txtBjoueur.Text.ToCharArray();
-            int penalty = int.Parse(txtBessai.Text);
-            foreach (char item in tabMotJoueur)
-            {
-                if (tabMotCach.Contains(item) & !txtBlettres.Text.Contains(item.ToString()))
-                {
-                    
-                    txtBlettres.Text += item.ToString();
-                }
-            }
-            if (txtBjoueur.Text == txtBmotCach.Text)
-            {
-                lblWinOrLose.Content = "Bravo ! Vous avez trouvé le mot caché";
-                chrono.Stop();
-                int score = options.Temps - int.Parse(txtBcompteur.Text) - penalty;
-                lblScore.Content = score.ToString();
-            }
-            if (txtBessai.Text==txtBnbEssais.Text)
-            {
-                lblWinOrLose.Content = "Perdu !";
-            }
-            if (i < int.Parse(txtBnbEssais.Text))
-            {
-                txtBessai.Text = (++i).ToString();
-            }
-        }
-
         private void TxtBtemps_TextChanged(object sender, TextChangedEventArgs e)
         {
             XmlDocument doc = new XmlDocument();
@@ -160,7 +122,6 @@ namespace Configuration
             }
             txtBtemps.Text = options.Temps.ToString();
         }
-
         private void TxtBcompteur_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (txtBcompteur.Text == options.Temps.ToString())
@@ -169,6 +130,55 @@ namespace Configuration
                 lblWinOrLose.Content = "Perdu ! temps écoulé";
             }
         }
-
+        #endregion
+        /// <summary>
+        /// Evènement bouttons
+        /// </summary>
+        #region
+        private void BtnNext_Click(object sender, RoutedEventArgs e)
+        {
+            lblWinOrLose.Content = "";
+            txtBlettres.Text = "";
+            txtBnote.Text = "Aidez-vous en formant des mots avec les lettres trouvées. Les lettres trouvées peuvent être présentes plusieurs fois dans le mot caché. ";
+            txtBjoueur.Text = "Entrez un mot ou des lettres et tentez";
+            if (i < int.Parse(txtBnbManches.Text))
+            {
+                if (atrouver.Count > 0)
+                {
+                    atrouver.Remove(txtBmotCach.Text);
+                }
+                txtBmotCach.Text = atrouver.MotCach;
+                txtBmanche.Text = (++i).ToString();
+            }
+        }
+        private void BtnTry_Click(object sender, RoutedEventArgs e)
+        {
+            char[] tabMotCach = txtBmotCach.Text.ToCharArray();
+            char[] tabMotJoueur = txtBjoueur.Text.ToCharArray();
+            int penalty = int.Parse(txtBessai.Text);
+            foreach (char item in tabMotJoueur)
+            {
+                if (tabMotCach.Contains(item) & !txtBlettres.Text.Contains(item.ToString()))
+                {
+                    txtBlettres.Text += item.ToString();
+                }
+            }
+            if (txtBjoueur.Text == txtBmotCach.Text)
+            {
+                lblWinOrLose.Content = "Bravo ! Vous avez trouvé le mot caché";
+                chrono.Stop();
+                int score = options.Temps - int.Parse(txtBcompteur.Text) - penalty;
+                lblScore.Content = score.ToString();
+            }
+            if (txtBessai.Text == txtBnbEssais.Text)
+            {
+                lblWinOrLose.Content = "Perdu !";
+            }
+            if (i < int.Parse(txtBnbEssais.Text))
+            {
+                txtBessai.Text = (++i).ToString();
+            }
+        }
+        #endregion
     }
 }
