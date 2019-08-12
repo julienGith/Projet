@@ -43,7 +43,7 @@ namespace Configuration
         private void TxtBpseudo_TextChanged(object sender, TextChangedEventArgs e)
         {
             joueur.Pseudo = txtBpseudo.Text;
-            joueur.SaveXML(@"Joueurs.xml");
+            joueur.SaveXML(@"Joueur.xml");
         }
     }
 }

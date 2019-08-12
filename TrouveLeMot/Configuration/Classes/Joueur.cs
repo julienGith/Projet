@@ -12,13 +12,13 @@ namespace Configuration
     public class Joueur
     {
         private string _pseudo;
-        private int _scores;
+        private int _score;
 
         public string Pseudo { get; set; }
-        public int Scores { get ; set; }
+        public int Score { get ; set; }
 
         public Joueur() { }
-        
+        public Joueur(string pseudo, int score) { }
 
         public void SaveXML(string path)
         {

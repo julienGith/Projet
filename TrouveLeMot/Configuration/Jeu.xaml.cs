@@ -37,7 +37,8 @@ namespace Configuration
             InitializeComponent();
             options.LoadXML(@"Options.xml");
             Chrono();
-            joueur.LoadXML(@"Joueurs.xml");
+            joueur.LoadXML(@"Joueur.xml");
+            lblPenalty.Content = options.NbPoinPerdus;
         }
         /// <summary>
         /// Methodes
@@ -130,6 +131,7 @@ namespace Configuration
             {
                 chrono.Stop();
                 lblWinOrLose.Content = "Perdu ! temps écoulé";
+                lblScorePartie.Content = joueur.Score;
             }
         }
         #endregion
@@ -147,7 +149,7 @@ namespace Configuration
             txtBjoueur.Text = "Entrez un mot ou des lettres et tentez";
             if (i < int.Parse(txtBnbManches.Text))
             {
-                joueur.SaveXML(@"Joueurs.xml");
+                joueur.SaveXML(@"Joueur.xml");
                 if (atrouver.Count > 0)
                 {
                     atrouver.Remove(txtBmotCach.Text);
@@ -174,7 +176,9 @@ namespace Configuration
                 chrono.Stop();
                 int score = options.Temps - int.Parse(txtBcompteur.Text) - penalty;
                 lblScore.Content = score.ToString();
-                joueur.Scores += score;
+                joueur.Score += score;
+                lblScorePartie.Content = joueur.Score;
+                joueur.SaveXML(@"Joueur.xml");
 
             }
             if (txtBessai.Text == txtBnbEssais.Text)

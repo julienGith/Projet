@@ -31,7 +31,6 @@ namespace Configuration
         Lexique lexique = new Lexique();
         Mots atrouver = new Mots();
         Niveau niveau = new Niveau();
-        Manche manche = new Manche();
         Options options = new Options();
         /// <summary>
         /// Méthodes
