@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
 <Joueur xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Score>43</Score>
+  <Pseudo>Entrez votre pseudo</Pseudo>
+  <Score>0</Score>
 </Joueur>

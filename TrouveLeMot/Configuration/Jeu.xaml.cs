@@ -146,12 +146,10 @@ namespace Configuration
         {
             j = 0;
             chrono.Start();
-
-            txtBessai.Clear();
-            
+            i = 1;                        
             txtBessai.Text = i.ToString();
-            
 
+            btnTry.IsEnabled = true;
             lblWinOrLose.Content = "";
             txtBlettres.Text = "";
             txtBnote.Text = "Aidez-vous en formant des mots avec les lettres trouvées. Les lettres trouvées peuvent être présentes plusieurs fois dans le mot caché. ";
@@ -195,6 +193,7 @@ namespace Configuration
             if (txtBessai.Text == txtBnbEssais.Text)
             {
                 lblWinOrLose.Content = "Perdu !";
+                btnTry.IsEnabled = false;
             }
             if (i < int.Parse(txtBnbEssais.Text))
             {
