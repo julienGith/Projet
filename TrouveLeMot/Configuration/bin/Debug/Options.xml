@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <NombreManches>2</NombreManches>
+  <NombreManches>1</NombreManches>
   <Temps>60</Temps>
-  <NbPoinPerdus>0</NbPoinPerdus>
+  <NbPoinPerdus>3</NbPoinPerdus>
   <NbEssais>7</NbEssais>
 </Options>

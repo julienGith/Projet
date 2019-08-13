@@ -32,6 +32,7 @@ namespace Configuration
         int i = 1;
         int j = 0;
         int k = 1;
+        
 
         public Jeu()
         {
@@ -39,7 +40,7 @@ namespace Configuration
             options.LoadXML(@"Options.xml");
             Chrono();
             joueur.LoadXML(@"Joueur.xml");
-            lblPenalty.Content = options.NbPoinPerdus;
+            
         }
         /// <summary>
         /// Methodes
@@ -168,7 +169,8 @@ namespace Configuration
         {
             char[] tabMotCach = txtBmotCach.Text.ToCharArray();
             char[] tabMotJoueur = txtBjoueur.Text.ToCharArray();
-            int penalty = int.Parse(txtBessai.Text);
+            
+            txtBpenalty.Text = (int.Parse(txtBessai.Text) * options.NbPoinPerdus).ToString();
             foreach (char item in tabMotJoueur)
             {
                 if (tabMotCach.Contains(item) & !txtBlettres.Text.Contains(item.ToString()))
@@ -180,7 +182,7 @@ namespace Configuration
             {
                 lblWinOrLose.Content = "Bravo ! Vous avez trouvé le mot caché";
                 chrono.Stop();
-                int score = options.Temps - int.Parse(txtBcompteur.Text) - penalty;
+                int score = options.Temps - int.Parse(txtBcompteur.Text) - int.Parse(txtBpenalty.Text);
                 lblScore.Content = score.ToString();
                 joueur.Score += score;
                 lblScorePartie.Content = joueur.Score;
@@ -206,6 +208,20 @@ namespace Configuration
         private void TxtBcompteur_Initialized(object sender, EventArgs e)
         {
             txtBessai.Text = i.ToString();
+        }
+
+        private void TxtBpenalty_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"Options.xml");
+            XmlNodeList Xn = doc.SelectNodes("//NbPoinPerdus");
+            foreach (XmlNode xNode in Xn)
+            {
+                options.NbPoinPerdus = int.Parse(xNode.InnerText);
+
+            }
+            txtBpenalty.Text = (int.Parse(txtBessai.Text) * options.NbPoinPerdus).ToString();
+
         }
     }
 }
