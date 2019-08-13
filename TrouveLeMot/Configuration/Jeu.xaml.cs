@@ -27,10 +27,11 @@ namespace Configuration
         Mots atrouver = new Mots();
         Options options = new Options();
         Joueur joueur = new Joueur();
+        ListJoueurs joueurs = new ListJoueurs();
         DispatcherTimer chrono = new DispatcherTimer();
         int i = 1;
         int j = 0;
-        
+        int k = 1;
 
         public Jeu()
         {
@@ -111,7 +112,7 @@ namespace Configuration
         }
         private void TxtBessai_TextChanged(object sender, TextChangedEventArgs e)
         {
-            txtBessai.Text = i.ToString();
+            //txtBessai.Text = i.ToString();
         }
         private void TxtBtemps_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -132,6 +133,8 @@ namespace Configuration
                 chrono.Stop();
                 lblWinOrLose.Content = "Perdu ! temps écoulé";
                 lblScorePartie.Content = joueur.Score;
+                joueurs.Add(joueur);
+                joueurs.SaveXML(@"listeJoueurs.xml");
             }
         }
         #endregion
@@ -143,13 +146,18 @@ namespace Configuration
         {
             j = 0;
             chrono.Start();
+
+            txtBessai.Clear();
+            
+            txtBessai.Text = i.ToString();
+            
+
             lblWinOrLose.Content = "";
             txtBlettres.Text = "";
             txtBnote.Text = "Aidez-vous en formant des mots avec les lettres trouvées. Les lettres trouvées peuvent être présentes plusieurs fois dans le mot caché. ";
             txtBjoueur.Text = "Entrez un mot ou des lettres et tentez";
             if (i < int.Parse(txtBnbManches.Text))
             {
-                joueur.SaveXML(@"Joueur.xml");
                 if (atrouver.Count > 0)
                 {
                     atrouver.Remove(txtBmotCach.Text);
@@ -179,6 +187,9 @@ namespace Configuration
                 joueur.Score += score;
                 lblScorePartie.Content = joueur.Score;
                 joueur.SaveXML(@"Joueur.xml");
+                joueurs.Add(joueur);
+                joueurs.SaveXML(@"ListeJoueurs.xml");
+                btnTry.IsEnabled = false;
 
             }
             if (txtBessai.Text == txtBnbEssais.Text)
@@ -187,9 +198,15 @@ namespace Configuration
             }
             if (i < int.Parse(txtBnbEssais.Text))
             {
-                txtBessai.Text = (++i).ToString();
+                i++;
+                txtBessai.Text = (i).ToString();
             }
         }
         #endregion
+
+        private void TxtBcompteur_Initialized(object sender, EventArgs e)
+        {
+            txtBessai.Text = i.ToString();
+        }
     }
 }
