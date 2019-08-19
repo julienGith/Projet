@@ -35,3 +35,4 @@ C:\Users\CDA\Desktop\GitHub\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouve
 C:\Users\CDA\Desktop\GitHub\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csproj.CopyComplete
 C:\Users\CDA\Desktop\GitHub\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.exe
 C:\Users\CDA\Desktop\GitHub\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.pdb
+C:\Users\CDA\Desktop\GitHub\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csprojAssemblyReference.cache
