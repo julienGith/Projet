@@ -8,5 +8,24 @@
         Title="Scores" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         
-    </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="score" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="pseudos"/>
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="menu"/>
+       </Grid>
 </Window>
