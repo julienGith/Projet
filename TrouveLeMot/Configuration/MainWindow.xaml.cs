@@ -195,7 +195,7 @@ namespace Configuration
                 btnSupr.IsEnabled = false;
             }
         }
-        //test
+        
         #endregion
         /// <summary>
         /// Bouttons
