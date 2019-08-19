@@ -4,28 +4,16 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 C:\Users\CDA\Desktop\GitHub\Projet\TrouveLeMot\Configuration\obj\Debug\
-=======
-C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\
->>>>>>> ade602d5faf38bcc4486c946b408351eec8ac975
 Configuration
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
 C:\Users\CDA\Desktop\GitHub\Projet\TrouveLeMot\Configuration\App.xaml
 4827937145
 
 16437354037
 191486327041
-=======
-C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\App.xaml
-4827937145
-
-16437354037
-191674938410
->>>>>>> ade602d5faf38bcc4486c946b408351eec8ac975
 AccueilJeu.xaml;Jeu.xaml;MainWindow.xaml;Scores.xaml;
 
 False
