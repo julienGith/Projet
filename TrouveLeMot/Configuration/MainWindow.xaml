@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Configuration"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:TrouveLeMot="clr-namespace:TrouveLeMot" x:Class="Configuration.MainWindow"
         mc:Ignorable="d"
-        Title="CONFIGURATION" Height="611.798" Width="993.031">
+        Title="CONFIGURATION" Height="611.798" Width="993.031" ResizeMode="NoResize">
     <Grid Margin="0,0,2,-20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="51*"/>
