@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using TrouveLeMot;
-//test5
+//test6
 namespace Configuration
 {
     /// <summary>
