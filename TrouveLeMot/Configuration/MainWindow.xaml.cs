@@ -28,6 +28,7 @@ namespace Configuration
             InitializeComponent();
             ChargeMots();
         }
+        //test
         Lexique lexique = new Lexique();
         Mots atrouver = new Mots();
         Niveau niveau = new Niveau();
@@ -195,7 +196,6 @@ namespace Configuration
                 btnSupr.IsEnabled = false;
             }
         }
-        //test
         #endregion
         /// <summary>
         /// Bouttons
