@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
 <ArrayOfJoueur xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Joueur>
-    <Score>81</Score>
-  </Joueur>
-  <Joueur>
-    <Score>81</Score>
+    <Score>53</Score>
   </Joueur>
 </ArrayOfJoueur>

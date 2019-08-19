@@ -2,6 +2,6 @@
 <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <NombreManches>1</NombreManches>
   <Temps>60</Temps>
-  <NbPoinPerdus>2</NbPoinPerdus>
+  <NbPoinPerdus>0</NbPoinPerdus>
   <NbEssais>7</NbEssais>
 </Options>

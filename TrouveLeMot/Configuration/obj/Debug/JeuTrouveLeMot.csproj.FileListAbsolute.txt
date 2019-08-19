@@ -72,3 +72,41 @@ C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configur
 C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.pdb
 C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configuration\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\julio\Desktop\repoGithHub\ProjetDeSynthèse\Projet\TrouveLeMot\Configuration\obj\Debug\App.baml
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\TrouveLeMot.exe.config
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\TrouveLeMot.exe
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\TrouveLeMot.pdb
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csprojAssemblyReference.cache
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\AccueilJeu.g.cs
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\Jeu.g.cs
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\MainWindow.g.cs
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\Scores.g.cs
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\App.g.cs
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot_MarkupCompile.cache
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot_MarkupCompile.lref
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\App.baml
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\AccueilJeu.baml
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\Jeu.baml
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\MainWindow.baml
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\Scores.baml
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.g.resources
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\Configuration.Properties.Resources.resources
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csproj.GenerateResource.cache
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csproj.CoreCompileInputs.cache
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\JeuTrouveLeMot.csproj.CopyComplete
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.exe
+C:\Users\CDA\Desktop\Depos github\Projet\TrouveLeMot\Configuration\obj\Debug\TrouveLeMot.pdb
